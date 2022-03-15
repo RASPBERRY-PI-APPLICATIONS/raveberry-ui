@@ -1,0 +1,17 @@
+* {
+    padding: 0 auto;
+    margin: 0 auto;
+}
+.img-content {
+    padding: 30px;
+    display: flex;
+    border: 1px solid yellow;
+}
+img {
+    width: 50%;
+    /* height: 50%; */
+
+}
+.description{
+    
+}
