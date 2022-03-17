@@ -1,0 +1,19 @@
+* {
+  padding: 0 auto;
+  margin: 0 auto;
+}
+
+.img-content {
+  padding: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: 1px solid #8f3838;
+}
+
+img {
+  width: 50%;
+  background-color: #8f3838;
+  /* height: 50%; */
+}
+/*# sourceMappingURL=style.css.map */
