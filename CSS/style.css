@@ -3,17 +3,11 @@
   margin: 0 auto;
 }
 
-.img-content {
-  padding: 30px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  border: 1px solid #8f3838;
-}
-
-img {
-  width: 50%;
-  background-color: #8f3838;
-  /* height: 50%; */
-}
-/*# sourceMappingURL=style.css.map */
+body {
+  background: url("../pics/FNjLPdIVkAMEKPV.jpeg"), linear-gradient(black, white);
+  background-size: 100% 100%;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+}/*# sourceMappingURL=style.css.map */
