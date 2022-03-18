@@ -1,20 +1,60 @@
-$background-color : #8f3838;
-
+$background-color: #8f3838;
+$glass-neumophism: #1b1b1bb9;
+$text-color: #e4e4e4;
+$shadow-color: #272727;
 * {
-    padding: 0 auto;
-    margin: 0 auto;
+   padding: 0 auto;
+   margin: 0 auto;
 }
+body {
+   /* linear-gradient(to bottom, rgba(245, 246, 252, 0.52), rgba(117, 19, 93, 0.73)),
+    url('images/background.jpg'); */
+   background: linear-gradient($glass-neumophism, $glass-neumophism),
+      url("../pics/FNjLPdIVkAMEKPV.jpeg");
+   background-size: 100% 100%;
+   background-attachment: fixed;
+   background-repeat: no-repeat;
+   width: 100%;
+   height: 100%;
+   backdrop-filter: blur(4px);
+}
+.body-wrapper {
+   padding: 5%;
+}
+/* -------------------------- image content -------------------------*/
 .img-content {
-    padding: 30px;
-    display: flex;
-    border: 1px solid $background-color;
-}
-img {
-    width: 50%;
-    background-color: $background-color;
-    /* height: 50%; */
+   display: flex;
+   justify-content: flex-start;
 
+   color: $text-color;
+   img {
+      width: 220px;
+      max-width: 300px;
+      min-width: 100px;
+      height: 230px;
+      max-height: 300px;
+      min-height: 100px;
+      box-shadow: 4px 5px 8px $shadow-color;
+      border-radius: 2px;
+   }
 }
-.description{
-    
+
+/* --------------------------  song list content ---------------- */
+.song-content {
+   color: $text-color;
+   padding: 5% 0;
+   display: flex;
+   .song-wrapper {
+      width: 20%;
+      max-width: 100%;
+      height: 100px;
+      max-height: 150px;
+   }
+   img {
+      width: 100%;
+      height: 100%;
+      box-shadow: 4px 5px 8px $shadow-color;
+      border-radius: 2px;
+      display: block;
+   }
 }
