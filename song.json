@@ -1,0 +1,23 @@
+[
+    {
+        "title":"happier",
+        "artist_name":"ed sheeran",
+        "artist_image":"./pics/blog.jpg",
+        "description":"this is an amaizing song",
+        "rated-count":8
+    },
+    {
+        "title":"where are you now",
+        "artist_name":"dua-lipa",
+        "artist_image":"./pics/FNjLPdIVkAMEKPV.jpeg",
+        "description":"this is an amaizing song",
+        "rated-count":3
+    },
+    {
+        "title":"where are you now",
+        "artist_name":"dua-lipa",
+        "artist_image":"./pics/FB_IMG_16082882235947358.jpg",
+        "description":"this is an amaizing song",
+        "rated-count":7
+    }
+]
