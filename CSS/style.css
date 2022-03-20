@@ -29,7 +29,8 @@ body {
   padding: 0 auto;
   margin: 0 auto;
   flex: 1;
-  display: none;
+  -webkit-animation-duration: 30s;
+          animation-duration: 30s;
   /* --------------------------  song list content ---------------- */
 }
 .content-wrapper .img-content {
@@ -90,6 +91,8 @@ body {
   height: 120px;
   max-height: 200px;
   display: inline-block;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
   margin-right: 30px;
   max-height: 150px;
   flex: 1;
@@ -139,8 +142,9 @@ body {
   color: white;
   cursor: pointer;
 }
-.setting-wrapper section {
-  padding: 5%;
+.setting-wrapper #settings {
+  display: none;
+  padding: 10%;
   background-color: rgba(228, 228, 228, 0.4);
   border-radius: 5px;
   box-shadow: 3px 3px 5px #2e2e2e;
