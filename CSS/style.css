@@ -16,10 +16,18 @@ body {
   -webkit-backdrop-filter: blur(4px);
           backdrop-filter: blur(4px);
 }
+body .loadingio-spinner-eclipse-rjtqitvukue {
+  background-color: transparent;
+  position: absolute;
+  z-index: 1;
+  transform: translate(-50%, 50%);
+  left: 50%;
+  display: block;
+}
 
 .body-wrapper {
   padding: 5%;
-  display: flex;
+  display: none;
   justify-content: center;
 }
 

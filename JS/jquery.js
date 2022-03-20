@@ -1,6 +1,12 @@
+const song_wrapper = document.getElementsByClassName("song-wrapper");
 
+
+/* ---------------------------------  JQUERY CODE  ------------------------ */
 $(function () {
-   
+   setTimeout(() => {
+   $(".loadingio-spinner-eclipse-rjtqitvukue").css("display", "none");
+   $(".body-wrapper").css("display", "flex");
+}, 1000);
    $(".fa-gear").click(function (e) {
       e.preventDefault();
       console.log("clicked");
@@ -29,4 +35,3 @@ $(function () {
          $("#artist_cover").attr("src", src);
       });
 });
-const song_wrapper = document.getElementsByClassName("song-wrapper");

@@ -23,11 +23,21 @@ body {
    // width: 100%;
    // height: 100%;
    backdrop-filter: blur(4px);
+
+   .loadingio-spinner-eclipse-rjtqitvukue {
+      background-color: transparent;
+      position: absolute;
+      z-index: 1;
+      transform: translate(-50%, 50%);
+      left: 50%;
+      display: block;
+   }
 }
 .body-wrapper {
    padding: 5%;
-   display: flex;
+   display: none;
    justify-content: center;
+   
    // align-items: flex-start;
 }
 /* content-wrapper */
