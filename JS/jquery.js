@@ -6,13 +6,13 @@ $(function () {
    setTimeout(() => {
    $(".loadingio-spinner-eclipse-rjtqitvukue").css("display", "none");
    $(".body-wrapper").css("display", "flex");
-}, 1000);
+}, 500);
    $(".fa-gear").click(function (e) {
       e.preventDefault();
       console.log("clicked");
       $(".fa-gear").css({ display: "none" });
       $(".content-wrapper").css({ display: "none" });
-      $("#settings").css({ display: "block" });
+      $("#settings").css({ display: "block" }); 
    });
 
    /* ----------  using fetch to get data ---------------- */
@@ -26,7 +26,8 @@ $(function () {
       .then((data) => {
          localStorage.setItem("myStorage", JSON.stringify(data));
          let src;
-         data.forEach((e) => {
+         // console.log(data);
+         data.variables.forEach((e) => {
             const { artist_image } = e;
             src = artist_image;
             // console.log(artist_image);
