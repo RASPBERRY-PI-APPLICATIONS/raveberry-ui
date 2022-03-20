@@ -1,4 +1,3 @@
-timeout
 
 $(function () {
    
