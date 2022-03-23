@@ -1,18 +1,23 @@
 $background-color: #8f3838;
-$glass-neumophism: #1b1b1bb9;
+$glass-neumophism: rgba(27, 27, 27, 0.725);
 $text-color: #e4e4e4;
 $shadow-color: #272727;
 $bai: "Bai Jamjuree", sans-serif;
 $BioRhyme: "BioRhyme", serif;
 
 /* --------------------------------------display content  ------------------------------------ */
+
+.body-wrapper {
+   display: flex;
+   margin-top: 50px;
+}
+
 .display-wrapper {
    color: $text-color;
    display: flex;
    flex-direction: column;
-   // text-transform: uppercase;
-   // justify-content: center;
-   align-items: center;
+   margin: 0 auto;
+   // align-items: center;
    text-align: center;
    h1 {
       // @extend .part-2;
@@ -23,9 +28,7 @@ $BioRhyme: "BioRhyme", serif;
       font-size: 60px;
       font-family: $BioRhyme;
       font-weight: bold;
-      left: 50%;
-   }
-   p {
+      // left: 50%;
    }
    a {
       // @extend a;
@@ -42,18 +45,20 @@ $BioRhyme: "BioRhyme", serif;
       min-width: 50px;
    }
    .song-wrapper {
-      width: 120px;
+      width: 80%;
+      // border: 1px solid yellow;
       position: relative;
-      max-width: 200px;
+      max-width: 140px;
       min-width: 50px;
       min-height: 50px;
       height: 100px;
       max-height: 200px;
       display: inline-block;
+      margin-top: 3%;
       animation-duration: 4s;
       // animation-delay: 10s;
       margin-right: 30px;
-      max-height: 150px;
+      // max-height: 150px;
       flex: 1;
 
       span {
@@ -65,7 +70,9 @@ $BioRhyme: "BioRhyme", serif;
       }
       img {
          width: 100%;
+         max-width: 400px;
          height: 100%;
+         min-width: 20px;
          box-shadow: 4px 5px 8px $shadow-color;
          border-radius: 2px;
          display: block;
@@ -88,5 +95,14 @@ $BioRhyme: "BioRhyme", serif;
          font-weight: bold;
          color: $text-color;
       }
+   }
+}
+
+
+.settings-wrapper {
+   padding: 30px 3%;
+   .fa {
+      font-size: 30px;
+      color: $text-color;
    }
 }
