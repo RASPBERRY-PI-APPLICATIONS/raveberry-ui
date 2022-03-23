@@ -1,0 +1,21 @@
+.setting-wrapper {
+  color: #e4e4e4;
+  height: 76vh;
+}
+.setting-wrapper .fa {
+  font-size: 30px;
+  text-shadow: 2px 5px 8px #272727;
+}
+.setting-wrapper .fa:hover {
+  color: white;
+  cursor: pointer;
+}
+.setting-wrapper #settings {
+  display: none;
+  padding: 10%;
+  background-color: rgba(228, 228, 228, 0.4);
+  border-radius: 5px;
+  box-shadow: 3px 3px 5px #2e2e2e;
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+}/*# sourceMappingURL=settings.css.map */
