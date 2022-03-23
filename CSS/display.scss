@@ -1,0 +1,92 @@
+$background-color: #8f3838;
+$glass-neumophism: #1b1b1bb9;
+$text-color: #e4e4e4;
+$shadow-color: #272727;
+$bai: "Bai Jamjuree", sans-serif;
+$BioRhyme: "BioRhyme", serif;
+
+/* --------------------------------------display content  ------------------------------------ */
+.display-wrapper {
+    color: $text-color;
+    display: flex;
+    flex-direction: column;
+    // text-transform: uppercase;
+    // justify-content: center;
+    align-items: center;
+    text-align: center;
+    h1 {
+       @extend .part-2;
+       text-transform: uppercase;
+       // padding-bottom:3%;
+       justify-content: center;
+       align-items: center;
+       font-size: 60px;
+       font-family: $BioRhyme;
+       font-weight: bold;
+       left: 50%;
+    }
+    p {
+    }
+    a {
+       // @extend a;
+       text-decoration: none;
+       color: $text-color;
+       &:hover {
+          text-decoration: underline;
+       }
+    }
+    hr {
+       text-align: center;
+       width: 70%;
+       max-width: 400px;
+       min-width: 50px;
+    }
+    .song-wrapper {
+       width: 120px;
+       position: relative;
+       max-width: 200px;
+       min-width: 50px;
+       min-height: 50px;
+       height: 100px;
+       max-height: 200px;
+       display: inline-block;
+       animation-duration: 4s;
+       // animation-delay: 10s;
+       margin-right: 30px;
+       max-height: 150px;
+       flex: 1;
+ 
+       span {
+          font-size: 12px;
+          line-height: 0.5;
+          font-family: $bai;
+          color: darken($text-color, 10%);
+          font-weight: 600;
+       }
+       img {
+          width: 100%;
+          height: 100%;
+          box-shadow: 4px 5px 8px $shadow-color;
+          border-radius: 2px;
+          display: block;
+       }
+       #overlay {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          z-index: 2;
+          background: $glass-neumophism;
+          top: 0;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 30px;
+          font-family: $BioRhyme;
+       }
+       h3 {
+          font-size: 12.5px;
+          font-weight: bold;
+          color: $text-color;
+       }
+    }
+ }
