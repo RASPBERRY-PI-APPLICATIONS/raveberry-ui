@@ -90,11 +90,43 @@
   color: #e4e4e4;
 }
 
-.settings-wrapper {
-  padding: 30px 3%;
+.display-wrapper .play_list {
+  background: #e4e4e4;
 }
 
-.settings-wrapper .fa {
+.settings-wrapper {
+  padding: 30px 3%;
+  display: flex;
+  flex-direction: column;
+}
+
+.settings-wrapper .fa-music {
+  cursor: pointer;
+  background: rgba(153, 153, 153, 0.863);
+  padding: 13px 17px 15px 13px;
+  border-radius: 50%;
+  text-shadow: 1px 3px 3px #272727;
+  box-shadow: 1px 3px 7px #272727;
   font-size: 30px;
   color: #e4e4e4;
+}
+
+.settings-wrapper .fa-music:hover {
+  background: rgba(98, 98, 98, 0.459);
+}
+
+.settings-wrapper .fa-gear {
+  cursor: pointer;
+  background: rgba(153, 153, 153, 0.863);
+  padding: 15px 16px;
+  margin-top: 15px;
+  border-radius: 50%;
+  text-shadow: 1px 3px 3px #272727;
+  box-shadow: 1px 3px 7px #272727;
+  font-size: 30px;
+  color: #e4e4e4;
+}
+
+.settings-wrapper .fa-gear:hover {
+  background: rgba(98, 98, 98, 0.459);
 }

@@ -16,6 +16,7 @@ $BioRhyme: "BioRhyme", serif;
    color: $text-color;
    display: flex;
    flex-direction: column;
+   //   align-items: flex-start;
    margin: 0 auto;
    // align-items: center;
    text-align: center;
@@ -96,13 +97,42 @@ $BioRhyme: "BioRhyme", serif;
          color: $text-color;
       }
    }
+   .play_list{
+      background: $text-color;
+   }
 }
-
 
 .settings-wrapper {
    padding: 30px 3%;
-   .fa {
+   display: flex;
+   flex-direction: column;
+
+   // display: inline;
+   .fa-music {
+      cursor: pointer;
+      background: rgba(153, 153, 153, 0.863);
+      padding: 13px 17px 15px 13px;
+      border-radius: 50%;
+      text-shadow: 1px 3px 3px $shadow-color;
+      box-shadow: 1px 3px 7px $shadow-color;
       font-size: 30px;
       color: $text-color;
+      &:hover {
+         background: rgba(98, 98, 98, 0.459);
+      }
+   }
+   .fa-gear {
+      cursor: pointer;
+      background: rgba(153, 153, 153, 0.863);
+      padding: 15px 16px;
+      margin-top: 15px;
+      border-radius: 50%;
+      text-shadow: 1px 3px 3px $shadow-color;
+      box-shadow: 1px 3px 7px $shadow-color;
+      font-size: 30px;
+      color: $text-color;
+      &:hover {
+         background: rgba(98, 98, 98, 0.459);
+      }
    }
 }
