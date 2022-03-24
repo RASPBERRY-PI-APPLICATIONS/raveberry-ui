@@ -48,30 +48,70 @@
 .display-wrapper .search {
   display: flex;
   width: 50%;
+  margin-left: 0;
   border-radius: 20px;
-  background: #ffffff6b;
+  background: #ffffff55;
   border: none;
   backdrop-filter: blur(4px);
   box-shadow: 2px 4px 5px #272727;
-  margin: 20px 0;
 }
 
 .display-wrapper .search i {
   padding: 10px;
   font-size: 20px;
   margin-right: 5px;
+  cursor: pointer;
+}
+
+.display-wrapper .search i:hover {
+  font-size: 22px;
+  padding: 9px;
 }
 
 .display-wrapper .search input {
   background: transparent;
-  margin: 0% 0%;
+  margin: 1% 1%;
   border: none;
   border-radius: 20px;
-  color: #e4e4e4 !important;
+}
+
+.display-wrapper .search input::placeholder {
+  color: #e4e4e4;
+  font-family: "Bai Jamjuree", sans-serif;
+  font-size: 15px;
 }
 
 .display-wrapper .search input:focus {
   box-shadow: inset 3px 3px 3px #272727;
+  background: transparent !important;
+}
+
+.top-level {
+  display: flex;
+  align-items: center;
+  border: 1px solid yellow;
+  margin: 10px 0;
+  padding: 10px 0;
+}
+
+.top-level #lights {
+  margin: 0;
+  background: blue;
+  box-shadow: 2px 3px 4px #272727;
+  border-radius: 5px;
+  height: auto;
+}
+
+.top-level #lights i {
+  padding: 10px 15px;
+  cursor: pointer;
+  height: auto;
+  font-size: 20px;
+}
+
+.top-level #lights i:hover {
+  background: black;
+  color: white;
 }
 
 #table_song {
@@ -84,16 +124,25 @@
 #table_song td {
   border: none !important;
   font-family: "BioRhyme", serif;
+  text-align: left;
+  margin-top: 5px;
+  text-transform: capitalize;
 }
 
 #table_song td i {
-  padding: 3px 7px;
-  margin: 0 5px;
+  padding: 5px 7px;
+  margin: 1px 5px;
   border-radius: 4px;
   font-size: 20px;
   color: white;
-  box-shadow: 3px 3px 5px #272727;
+  box-shadow: inset 1px 2px 3px #272727;
+  box-shadow: inset -1px -2px 3px #272727;
   cursor: pointer;
+  float: right;
+}
+
+#table_song td p {
+  font-size: 11px;
 }
 
 #table_song td .fa-angle-up {
@@ -112,6 +161,14 @@
   background: rgba(16, 16, 97, 0.781);
 }
 
+#table_song td .fa-level-up {
+  background: rgba(126, 10, 146, 0.562);
+}
+
+#table_song td .fa-level-up:hover {
+  background: rgba(126, 10, 146, 0.931);
+}
+
 #table_song td .fa-trash {
   background: #923636;
 }
@@ -128,7 +185,10 @@
   width: 45px;
   height: 25px;
   border-radius: 4px;
-  margin-right: 5px;
+  align-self: center;
+  justify-self: center;
+  margin-top: 10px;
+  float: right;
 }
 
 #table_song tr:hover {
