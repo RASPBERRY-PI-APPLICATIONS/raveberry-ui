@@ -30,7 +30,7 @@ $BioRhyme: "BioRhyme", serif;
       font-family: $BioRhyme;
       font-weight: bold;
       // left: 50%;
-   } 
+   }
    a {
       // @extend a;
       text-decoration: none;
@@ -47,16 +47,93 @@ $BioRhyme: "BioRhyme", serif;
    }
    span {
       margin-left: 10px;
-      background: mix($text-color,rgba(255, 255, 255, 0.014));
+      background: mix($text-color, rgba(255, 255, 255, 0.014));
       padding: 5px;
       border-radius: 3px;
       text-transform: capitalize;
    }
-   .play_list{
-      background: $text-color;
+ 
+   .search {
+      display: flex;
+      width: 50%;
+      border-radius: 20px;
+      background: #ffffff6b;
+      border: none;
+      backdrop-filter: blur(4px);
+      box-shadow: 2px 4px 5px $shadow-color;
+      margin: 20px 0;
+      i {
+         padding: 10px;
+         font-size: 20px;
+         margin-right: 5px;
+      }
+      input {
+         background: transparent;
+         margin: 0% 0%;
+         border: none;
+         border-radius: 20px;
+         color: $text-color !important;
+         &:focus {
+            box-shadow: inset 3px 3px 3px $shadow-color;
+         }
+      }
    }
 }
+#table_song {
+   background-color: #ffffff25;
+   box-shadow: 2px 3px 4px $shadow-color;
+   border-radius: 5px;
+   backdrop-filter: blur(4px);
+   td {
+      border: none !important;
+      font-family: $BioRhyme;
+      // font-weight: 900;
 
+      i {
+         padding: 3px 7px;
+         margin: 0 5px;
+         border-radius: 4px;
+         font-size: 20px;
+         color: rgb(255, 255, 255);
+         box-shadow: 3px 3px 5px $shadow-color;
+         cursor: pointer;
+      }
+      .fa-angle-up {
+         background: rgba(0, 128, 0, 0.431);
+         &:hover{
+         background: rgba(0, 128, 0, 0.801);
+         
+         }
+      }
+      .fa-angle-down {
+         background: rgba(16, 16, 97, 0.388);
+         &:hover{
+         background: rgba(16, 16, 97, 0.781);
+         }
+      }
+      .fa-trash {
+         background: rgb(146, 54, 54);
+         &:hover{
+         background: rgb(204, 0, 0);
+         }
+      }
+   }
+   &:hover {
+      border-radius: 5px;
+   }
+   img {
+      width: 45px;
+      height: 25px;
+      border-radius: 4px;
+      margin-right: 5px;
+   }
+   tr:hover {
+      background-color: #ffffff11;
+      backdrop-filter: blur(4px);
+
+      color: #ffffff;
+   }
+}
 .settings-wrapper {
    padding: 30px 3%;
    display: flex;
@@ -77,6 +154,20 @@ $BioRhyme: "BioRhyme", serif;
       }
    }
    .fa-gear {
+      cursor: pointer;
+      background: rgba(153, 153, 153, 0.863);
+      padding: 15px 16px;
+      margin-top: 15px;
+      border-radius: 50%;
+      text-shadow: 1px 3px 3px $shadow-color;
+      box-shadow: 1px 3px 7px $shadow-color;
+      font-size: 30px;
+      color: $text-color;
+      &:hover {
+         background: rgba(98, 98, 98, 0.459);
+      }
+   }
+   .fa-expand {
       cursor: pointer;
       background: rgba(153, 153, 153, 0.863);
       padding: 15px 16px;

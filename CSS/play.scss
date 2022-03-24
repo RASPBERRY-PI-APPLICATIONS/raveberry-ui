@@ -12,6 +12,7 @@ $text-color: #e4e4e4;
 $shadow-color: #272727;
 $bai: "Bai Jamjuree", sans-serif;
 $BioRhyme: "BioRhyme", serif;
+
 body {
    display: flex;
    padding: 5%;
@@ -87,6 +88,13 @@ body {
          }
       }
    }
+   .part-2 span {
+      // margin-left: 10px;
+      background: mix($text-color, rgba(255, 255, 255, 0.014));
+      padding: 5px;
+      border-radius: 3px;
+      text-transform: capitalize;
+   }
 
    /* --------------------------  song list content ---------------- */
    .song-content {
@@ -95,20 +103,21 @@ body {
       h1 {
          font-family: $bai;
          font-size: 25px;
+         text-transform: capitalize;
          // font-size: 50px;
          // text-decoration: underline;
       }
       hr {
-         width: 200px;
+         // width: 300px;
          margin-left: 0;
       }
       .song-wrapper {
          width: 120px;
          position: relative;
-         max-width: 200px;
+         max-width: 100px;
          min-width: 50px;
          min-height: 50px;
-         height: 100px;
+         height: 80px;
          max-height: 200px;
          display: inline-block;
          animation-duration: 4s;
@@ -125,15 +134,16 @@ body {
             font-weight: 600;
          }
          img {
-            width: 100%;
+            width: 80%;
             height: 100%;
             box-shadow: 4px 5px 8px $shadow-color;
             border-radius: 2px;
             display: block;
+            margin-left: 0;
          }
          #overlay {
             position: absolute;
-            width: 100%;
+            width: 80%;
             height: 100%;
             z-index: 2;
             background: $glass-neumophism;
@@ -145,7 +155,7 @@ body {
             font-family: $BioRhyme;
          }
          h3 {
-            font-size: 12.5px;
+            font-size: 10px;
             font-weight: bold;
             color: $text-color;
          }
