@@ -1,18 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@200&family=BioRhyme:wght@200;300;400;700&display=swap");
+*,
+html {
+  padding: 0 auto;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  padding: 5%;
+}
+
 .content-wrapper {
   /* -------------------------- image content -------------------------*/
   padding: 0 auto;
   margin: 0 auto;
-  flex: 1;
-  -webkit-animation-duration: 30s;
-          animation-duration: 30s;
-  display: none;
+  animation-duration: 30s;
   /* --------------------------  song list content ---------------- */
 }
+
 .content-wrapper .img-content {
   display: flex;
   flex-wrap: wrap;
   color: #e4e4e4;
 }
+
 .content-wrapper .img-content img {
   width: 220px;
   max-width: 300px;
@@ -23,15 +35,18 @@
   box-shadow: 4px 5px 8px #272727;
   border-radius: 2px;
 }
+
 .content-wrapper .img-content .description {
   padding: 3% 5%;
   flex: 1;
 }
+
 .content-wrapper .img-content .description h1 {
   font-size: 27px;
   font-family: "BioRhyme", serif;
   text-shadow: 3px 5px 8px #272727;
 }
+
 .content-wrapper .img-content .description h2, .content-wrapper .img-content .description .part-2 {
   font-size: 16px;
   font-family: sans-serif;
@@ -40,45 +55,69 @@
   letter-spacing: 1px;
   color: #cbcbcb;
 }
+
 .content-wrapper .img-content .description hr {
   background-color: #e4e4e4;
   max-width: 400px;
   margin-left: 0;
 }
+
 .content-wrapper .img-content .description p {
   margin-bottom: 25px;
 }
+
 .content-wrapper .img-content .description span {
-  background-color: rgba(228, 228, 228, 0.4);
   padding: 5px;
   border-radius: 2px;
   margin-top: 10px !important;
 }
+
 .content-wrapper .img-content .description a {
   color: #e4e4e4;
   text-decoration: none;
 }
+
 .content-wrapper .img-content .description a:hover {
   text-decoration: underline;
 }
+
+.content-wrapper .part-2 span {
+  background: rgba(228, 228, 228, 0.507);
+  padding: 5px;
+  border-radius: 3px;
+  text-transform: capitalize;
+}
+
 .content-wrapper .song-content {
   color: #e4e4e4;
+  margin-top: 4%;
 }
+
+.content-wrapper .song-content h1 {
+  font-family: "Bai Jamjuree", sans-serif;
+  font-size: 25px;
+  text-transform: capitalize;
+}
+
+.content-wrapper .song-content hr {
+  margin-left: 0;
+}
+
 .content-wrapper .song-content .song-wrapper {
   width: 120px;
   position: relative;
-  max-width: 200px;
+  max-width: 100px;
   min-width: 50px;
   min-height: 50px;
-  height: 100px;
+  height: 80px;
   max-height: 200px;
   display: inline-block;
-  -webkit-animation-duration: 4s;
-          animation-duration: 4s;
+  animation-duration: 4s;
   margin-right: 30px;
   max-height: 150px;
   flex: 1;
 }
+
 .content-wrapper .song-content .song-wrapper span {
   font-size: 12px;
   line-height: 0.5;
@@ -86,19 +125,22 @@
   color: #cbcbcb;
   font-weight: 600;
 }
+
 .content-wrapper .song-content .song-wrapper img {
-  width: 100%;
+  width: 80%;
   height: 100%;
   box-shadow: 4px 5px 8px #272727;
   border-radius: 2px;
   display: block;
+  margin-left: 0;
 }
+
 .content-wrapper .song-content .song-wrapper #overlay {
   position: absolute;
-  width: 100%;
+  width: 80%;
   height: 100%;
   z-index: 2;
-  background: #1b1b1bb9;
+  background: rgba(27, 27, 27, 0.725);
   top: 0;
   display: flex;
   justify-content: center;
@@ -106,8 +148,46 @@
   font-size: 30px;
   font-family: "BioRhyme", serif;
 }
+
 .content-wrapper .song-content .song-wrapper h3 {
-  font-size: 12.5px;
+  font-size: 10px;
   font-weight: bold;
   color: #e4e4e4;
-}/*# sourceMappingURL=play.css.map */
+}
+
+.settings-wrapper {
+  padding: 30px 3%;
+  display: flex;
+  flex-direction: column;
+}
+
+.settings-wrapper .fa-music {
+  cursor: pointer;
+  background: rgba(153, 153, 153, 0.863);
+  padding: 13px 17px 15px 13px;
+  border-radius: 50%;
+  text-shadow: 1px 3px 3px #272727;
+  box-shadow: 1px 3px 7px #272727;
+  font-size: 30px;
+  color: #e4e4e4;
+}
+
+.settings-wrapper .fa-music:hover {
+  background: rgba(98, 98, 98, 0.459);
+}
+
+.settings-wrapper .fa-gear {
+  cursor: pointer;
+  background: rgba(153, 153, 153, 0.863);
+  padding: 15px 16px;
+  margin-top: 15px;
+  border-radius: 50%;
+  text-shadow: 1px 3px 3px #272727;
+  box-shadow: 1px 3px 7px #272727;
+  font-size: 30px;
+  color: #e4e4e4;
+}
+
+.settings-wrapper .fa-gear:hover {
+  background: rgba(98, 98, 98, 0.459);
+}

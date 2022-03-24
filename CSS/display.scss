@@ -1,18 +1,24 @@
 $background-color: #8f3838;
-$glass-neumophism: #1b1b1bb9;
+$glass-neumophism: rgba(27, 27, 27, 0.725);
 $text-color: #e4e4e4;
 $shadow-color: #272727;
 $bai: "Bai Jamjuree", sans-serif;
 $BioRhyme: "BioRhyme", serif;
 
 /* --------------------------------------display content  ------------------------------------ */
+
+.body-wrapper {
+   display: flex;
+   margin-top: 50px;
+}
+
 .display-wrapper {
    color: $text-color;
    display: flex;
    flex-direction: column;
-   // text-transform: uppercase;
-   // justify-content: center;
-   align-items: center;
+   //   align-items: flex-start;
+   margin: 0 auto;
+   // align-items: center;
    text-align: center;
    h1 {
       // @extend .part-2;
@@ -23,9 +29,7 @@ $BioRhyme: "BioRhyme", serif;
       font-size: 60px;
       font-family: $BioRhyme;
       font-weight: bold;
-      left: 50%;
-   }
-   p {
+      // left: 50%;
    }
    a {
       // @extend a;
@@ -41,52 +45,195 @@ $BioRhyme: "BioRhyme", serif;
       max-width: 400px;
       min-width: 50px;
    }
-   .song-wrapper {
-      width: 120px;
-      position: relative;
-      max-width: 200px;
-      min-width: 50px;
-      min-height: 50px;
-      height: 100px;
-      max-height: 200px;
-      display: inline-block;
-      animation-duration: 4s;
-      // animation-delay: 10s;
-      margin-right: 30px;
-      max-height: 150px;
-      flex: 1;
+   span {
+      margin-left: 10px;
+      background: mix($text-color, rgba(255, 255, 255, 0.014));
+      padding: 5px;
+      border-radius: 3px;
+      text-transform: capitalize;
+   }
 
-      span {
-         font-size: 12px;
-         line-height: 0.5;
-         font-family: $bai;
-         color: darken($text-color, 10%);
-         font-weight: 600;
+   .search {
+      display: flex;
+      width: 50%;
+      margin-left: 0;
+      border-radius: 20px;
+      background: #ffffff55;
+      border: none;
+      backdrop-filter: blur(4px);
+      box-shadow: 2px 4px 5px $shadow-color;
+      i {
+         padding: 10px;
+         font-size: 20px;
+         margin-right: 5px;
+         cursor: pointer;
+         &:hover {
+            font-size: 22px;
+            padding: 9px;
+         }
       }
-      img {
-         width: 100%;
-         height: 100%;
-         box-shadow: 4px 5px 8px $shadow-color;
-         border-radius: 2px;
-         display: block;
+      input {
+         background: transparent;
+         margin: 1% 1%;
+         border: none;
+         border-radius: 20px;
+         &::placeholder {
+            color: $text-color;
+            font-family: $bai;
+            font-size: 15px;
+         }
+
+         &:focus {
+            box-shadow: inset 3px 3px 3px $shadow-color;
+            background: transparent !important;
+         }
       }
-      #overlay {
-         position: absolute;
-         width: 100%;
-         height: 100%;
-         z-index: 2;
-         background: $glass-neumophism;
-         top: 0;
-         display: flex;
-         justify-content: center;
-         align-items: center;
-         font-size: 30px;
-         font-family: $BioRhyme;
+   }
+}
+.top-level {
+   display: flex;
+   align-items: center;
+   border: 1px solid yellow;
+   margin: 10px 0;
+   padding: 10px 0;
+   #lights {
+      margin: 0;
+      background: blue;
+      box-shadow: 2px 3px 4px $shadow-color;
+      border-radius: 5px;
+      height: auto;
+      i {
+         padding: 10px 15px;
+         cursor: pointer;
+         height: auto;
+         font-size: 20px;
+         &:hover {
+            background: black;
+            color: white;
+         }
       }
-      h3 {
-         font-size: 12.5px;
-         font-weight: bold;
-         color: $text-color;
+   }
+}
+#table_song {
+   background-color: #ffffff25;
+   box-shadow: 2px 3px 4px $shadow-color;
+   border-radius: 5px;
+   backdrop-filter: blur(4px);
+   // display: flex;
+   // justify-content:stretch;
+   td {
+      border: none !important;
+      font-family: $BioRhyme;
+      text-align: left;
+      margin-top: 5px;
+      text-transform: capitalize;
+      // font-weight: 900;
+
+      i {
+         padding: 5px 7px;
+         margin: 1px 5px;
+         border-radius: 4px;
+         font-size: 20px;
+         color: rgb(255, 255, 255);
+         box-shadow: inset 1px 2px 3px $shadow-color;
+         box-shadow: inset -1px -2px 3px $shadow-color;
+         cursor: pointer;
+         float: right;
+      }
+
+      p{
+         font-size: 11px;
+      }
+      .fa-angle-up {
+         background: rgba(0, 128, 0, 0.431);
+         &:hover {
+            background: rgba(0, 128, 0, 0.801);
+         }
+      }
+      .fa-angle-down {
+         background: rgba(16, 16, 97, 0.388);
+         &:hover {
+            background: rgba(16, 16, 97, 0.781);
+         }
+      }
+      .fa-level-up {
+         background: rgba(126, 10, 146, 0.562);
+         &:hover {
+            background: rgba(126, 10, 146, 0.931);
+         }
+      }
+      .fa-trash {
+         background: rgb(146, 54, 54);
+         &:hover {
+            background: rgb(204, 0, 0);
+         }
+      }
+   }
+   &:hover {
+      border-radius: 5px;
+   }
+   img {
+      width: 45px;
+      height: 25px;
+      border-radius: 4px;
+      align-self: center;
+      justify-self: center;
+      margin-top: 10px;
+      // margin-right: 0;
+      float: right;
+   }
+   tr:hover {
+      background-color: #ffffff11;
+      backdrop-filter: blur(4px);
+
+      color: #ffffff;
+   }
+}
+.settings-wrapper {
+   padding: 30px 3%;
+   display: flex;
+   flex-direction: column;
+
+   // display: inline;
+   .fa-music {
+      cursor: pointer;
+      background: rgba(153, 153, 153, 0.863);
+      padding: 13px 17px 15px 13px;
+      border-radius: 50%;
+      text-shadow: 1px 3px 3px $shadow-color;
+      box-shadow: 1px 3px 7px $shadow-color;
+      font-size: 30px;
+      color: $text-color;
+      &:hover {
+         background: rgba(98, 98, 98, 0.459);
+      }
+   }
+   .fa-gear {
+      cursor: pointer;
+      background: rgba(153, 153, 153, 0.863);
+      padding: 15px 16px;
+      margin-top: 15px;
+      border-radius: 50%;
+      text-shadow: 1px 3px 3px $shadow-color;
+      box-shadow: 1px 3px 7px $shadow-color;
+      font-size: 30px;
+      color: $text-color;
+      &:hover {
+         background: rgba(98, 98, 98, 0.459);
+      }
+   }
+   .fa-expand {
+      cursor: pointer;
+      background: rgba(153, 153, 153, 0.863);
+      padding: 15px 16px;
+      margin-top: 15px;
+      border-radius: 50%;
+      text-shadow: 1px 3px 3px $shadow-color;
+      box-shadow: 1px 3px 7px $shadow-color;
+      font-size: 30px;
+      color: $text-color;
+      &:hover {
+         background: rgba(98, 98, 98, 0.459);
       }
    }
 }
