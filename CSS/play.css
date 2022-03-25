@@ -15,16 +15,15 @@ body {
   /* -------------------------- image content -------------------------*/
   padding: 0 auto;
   margin: 0 auto;
-  animation-duration: 30s;
+  -webkit-animation-duration: 30s;
+          animation-duration: 30s;
   /* --------------------------  song list content ---------------- */
 }
-
 .content-wrapper .img-content {
   display: flex;
   flex-wrap: wrap;
   color: #e4e4e4;
 }
-
 .content-wrapper .img-content img {
   width: 220px;
   max-width: 300px;
@@ -35,18 +34,15 @@ body {
   box-shadow: 4px 5px 8px #272727;
   border-radius: 2px;
 }
-
 .content-wrapper .img-content .description {
   padding: 3% 5%;
   flex: 1;
 }
-
 .content-wrapper .img-content .description h1 {
   font-size: 27px;
   font-family: "BioRhyme", serif;
   text-shadow: 3px 5px 8px #272727;
 }
-
 .content-wrapper .img-content .description h2, .content-wrapper .img-content .description .part-2 {
   font-size: 16px;
   font-family: sans-serif;
@@ -55,54 +51,44 @@ body {
   letter-spacing: 1px;
   color: #cbcbcb;
 }
-
 .content-wrapper .img-content .description hr {
   background-color: #e4e4e4;
   max-width: 400px;
   margin-left: 0;
 }
-
 .content-wrapper .img-content .description p {
   margin-bottom: 25px;
 }
-
 .content-wrapper .img-content .description span {
   padding: 5px;
   border-radius: 2px;
   margin-top: 10px !important;
 }
-
 .content-wrapper .img-content .description a {
   color: #e4e4e4;
   text-decoration: none;
 }
-
 .content-wrapper .img-content .description a:hover {
   text-decoration: underline;
 }
-
 .content-wrapper .part-2 span {
   background: rgba(228, 228, 228, 0.507);
   padding: 5px;
   border-radius: 3px;
   text-transform: capitalize;
 }
-
 .content-wrapper .song-content {
   color: #e4e4e4;
   margin-top: 4%;
 }
-
 .content-wrapper .song-content h1 {
   font-family: "Bai Jamjuree", sans-serif;
   font-size: 25px;
   text-transform: capitalize;
 }
-
 .content-wrapper .song-content hr {
   margin-left: 0;
 }
-
 .content-wrapper .song-content .song-wrapper {
   width: 120px;
   position: relative;
@@ -112,12 +98,12 @@ body {
   height: 80px;
   max-height: 200px;
   display: inline-block;
-  animation-duration: 4s;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
   margin-right: 30px;
   max-height: 150px;
   flex: 1;
 }
-
 .content-wrapper .song-content .song-wrapper span {
   font-size: 12px;
   line-height: 0.5;
@@ -125,7 +111,6 @@ body {
   color: #cbcbcb;
   font-weight: 600;
 }
-
 .content-wrapper .song-content .song-wrapper img {
   width: 80%;
   height: 100%;
@@ -134,7 +119,6 @@ body {
   display: block;
   margin-left: 0;
 }
-
 .content-wrapper .song-content .song-wrapper #overlay {
   position: absolute;
   width: 80%;
@@ -148,7 +132,6 @@ body {
   font-size: 30px;
   font-family: "BioRhyme", serif;
 }
-
 .content-wrapper .song-content .song-wrapper h3 {
   font-size: 10px;
   font-weight: bold;
@@ -160,7 +143,6 @@ body {
   display: flex;
   flex-direction: column;
 }
-
 .settings-wrapper .fa-music {
   cursor: pointer;
   background: rgba(153, 153, 153, 0.863);
@@ -171,11 +153,9 @@ body {
   font-size: 30px;
   color: #e4e4e4;
 }
-
 .settings-wrapper .fa-music:hover {
   background: rgba(98, 98, 98, 0.459);
 }
-
 .settings-wrapper .fa-gear {
   cursor: pointer;
   background: rgba(153, 153, 153, 0.863);
@@ -187,7 +167,6 @@ body {
   font-size: 30px;
   color: #e4e4e4;
 }
-
 .settings-wrapper .fa-gear:hover {
   background: rgba(98, 98, 98, 0.459);
-}
+}/*# sourceMappingURL=play.css.map */

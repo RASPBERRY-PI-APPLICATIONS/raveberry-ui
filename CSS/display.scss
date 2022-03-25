@@ -61,7 +61,7 @@ $BioRhyme: "BioRhyme", serif;
       background: #ffffff55;
       border: none;
       backdrop-filter: blur(4px);
-      box-shadow: 2px 4px 5px $shadow-color;
+      box-shadow: -2px -2px 2px rgba(255, 255, 255, 0.603), 2px 2px 3px $shadow-color;
       i {
          padding: 10px;
          font-size: 20px;
@@ -74,8 +74,10 @@ $BioRhyme: "BioRhyme", serif;
       }
       input {
          background: transparent;
-         margin: 1% 1%;
+         margin: 1% 1% 2%;
          border: none;
+         box-shadow: inset 1px 2px 3px $shadow-color;
+
          border-radius: 20px;
          &::placeholder {
             color: $text-color;
@@ -93,20 +95,26 @@ $BioRhyme: "BioRhyme", serif;
 .top-level {
    display: flex;
    align-items: center;
-   border: 1px solid yellow;
+   // border: 1px solid yellow;
    margin: 10px 0;
    padding: 10px 0;
    #lights {
       margin: 0;
-      background: blue;
+      background: rgba(255, 255, 255, 0.788);
       box-shadow: 2px 3px 4px $shadow-color;
       border-radius: 5px;
+      color: #ff009d;
       height: auto;
       i {
          padding: 10px 15px;
          cursor: pointer;
+         margin: 0 auto;
          height: auto;
-         font-size: 20px;
+         font-size: 25px;
+         &:nth-child(1){
+            // border-right: 1px solid rgba(0, 0, 0, 0.192);
+            background:#272727;
+         }
          &:hover {
             background: black;
             color: white;
@@ -116,7 +124,8 @@ $BioRhyme: "BioRhyme", serif;
 }
 #table_song {
    background-color: #ffffff25;
-   box-shadow: 2px 3px 4px $shadow-color;
+   // box-shadow: 2px 3px 4px $shadow-color;
+   box-shadow: -2px -2px 2px rgba(255, 255, 255, 0.411), 2px 4px 5px $shadow-color;
    border-radius: 5px;
    backdrop-filter: blur(4px);
    // display: flex;
@@ -136,7 +145,8 @@ $BioRhyme: "BioRhyme", serif;
          font-size: 20px;
          color: rgb(255, 255, 255);
          box-shadow: inset 1px 2px 3px $shadow-color;
-         box-shadow: inset -1px -2px 3px $shadow-color;
+         // box-shadow: inset -1px -2px 3px $shadow-color;
+         box-shadow:inset 2px 4px 5px $shadow-color;
          cursor: pointer;
          float: right;
       }

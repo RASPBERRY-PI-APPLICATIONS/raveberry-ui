@@ -53,7 +53,7 @@
   background: #ffffff55;
   border: none;
   backdrop-filter: blur(4px);
-  box-shadow: 2px 4px 5px #272727;
+  box-shadow: -2px -2px 2px rgba(255, 255, 255, 0.603), 2px 2px 3px #272727;
 }
 
 .display-wrapper .search i {
@@ -70,8 +70,9 @@
 
 .display-wrapper .search input {
   background: transparent;
-  margin: 1% 1%;
+  margin: 1% 1% 2%;
   border: none;
+  box-shadow: inset 1px 2px 3px #272727;
   border-radius: 20px;
 }
 
@@ -89,24 +90,29 @@
 .top-level {
   display: flex;
   align-items: center;
-  border: 1px solid yellow;
   margin: 10px 0;
   padding: 10px 0;
 }
 
 .top-level #lights {
   margin: 0;
-  background: blue;
+  background: rgba(255, 255, 255, 0.788);
   box-shadow: 2px 3px 4px #272727;
   border-radius: 5px;
+  color: #ff009d;
   height: auto;
 }
 
 .top-level #lights i {
   padding: 10px 15px;
   cursor: pointer;
+  margin: 0 auto;
   height: auto;
-  font-size: 20px;
+  font-size: 25px;
+}
+
+.top-level #lights i:nth-child(1) {
+  background: #272727;
 }
 
 .top-level #lights i:hover {
@@ -116,7 +122,7 @@
 
 #table_song {
   background-color: #ffffff25;
-  box-shadow: 2px 3px 4px #272727;
+  box-shadow: -2px -2px 2px rgba(255, 255, 255, 0.411), 2px 4px 5px #272727;
   border-radius: 5px;
   backdrop-filter: blur(4px);
 }
@@ -136,7 +142,7 @@
   font-size: 20px;
   color: white;
   box-shadow: inset 1px 2px 3px #272727;
-  box-shadow: inset -1px -2px 3px #272727;
+  box-shadow: inset 2px 4px 5px #272727;
   cursor: pointer;
   float: right;
 }
