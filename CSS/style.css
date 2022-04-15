@@ -80,7 +80,6 @@ body .loadingio-spinner-eclipse-rjtqitvukue {
   width: 80%;
   padding: 30px;
 }
-
 .content_wrapper .search_wrapper {
   max-width: 700px;
   width: 70%;
@@ -130,7 +129,6 @@ body .loadingio-spinner-eclipse-rjtqitvukue {
   margin-right: 0;
   cursor: pointer;
 }
-
 .content_wrapper .search_wrapper input {
   outline: none;
   width: 100%;
@@ -163,7 +161,6 @@ body .loadingio-spinner-eclipse-rjtqitvukue {
   color: rgba(255, 255, 255, 0.74);
   font-size: 18px;
 }
-
 .content_wrapper .song_wrapper {
   padding: 3% 0;
   font-family: "comfortaa";
@@ -193,7 +190,6 @@ body .loadingio-spinner-eclipse-rjtqitvukue {
   margin-top: 50px;
   font-size: 30px;
 }
-
 .content_wrapper .song_wrapper .song_details .description hr {
   height: 1px;
   color: rgba(255, 255, 255, 0.452);
@@ -241,14 +237,12 @@ body .loadingio-spinner-eclipse-rjtqitvukue {
   padding: 30px;
   width: 100%;
 }
-
 .content_wrapper .song_wrapper .song_list h2 {
   text-align: left;
   color: #fff;
   font-size: 30px;
   margin-bottom: 50px;
 }
-
 .content_wrapper .song_wrapper .song_list #table_list {
   display: inline-block;
   border-collapse: collapse;
@@ -260,7 +254,6 @@ body .loadingio-spinner-eclipse-rjtqitvukue {
   overflow: auto;
   max-height: 1000px;
 }
-
 .content_wrapper .song_wrapper .song_list #table_list thead {
   border-bottom: 1px solid #fff;
   margin: 100px;
@@ -283,31 +276,26 @@ body .loadingio-spinner-eclipse-rjtqitvukue {
   display: none;
   padding: 2px;
 }
-
 .content_wrapper .song_wrapper .song_list #table_list tbody tr .icons i {
   padding: 10px;
   margin: 3px;
   cursor: pointer;
   font-size: 40px;
 }
-
 .content_wrapper .song_wrapper .song_list #table_list tbody tr .icons i:hover {
   background-color: #fff;
   color: green;
   border-radius: 10px;
 }
-
 .content_wrapper .song_wrapper .song_list #table_list tbody tr td {
   padding: 5px 50px;
   margin: 0;
   border-top: none !important;
 }
-
 .content_wrapper .song_wrapper .song_list #table_list tbody tr td img {
   width: 60px;
   border-radius: 5px;
 }
-
 .content_wrapper .song_wrapper .song_list #table_list tbody tr td .fa-play {
   color: #fff;
   display: none;
@@ -327,7 +315,6 @@ body .loadingio-spinner-eclipse-rjtqitvukue {
   padding: 30px;
   cursor: pointer;
 }
-
 .content_wrapper .song_wrapper #show_more:hover {
   background: rgba(255, 255, 255, 0.178);
   border-radius: 10px;
@@ -426,7 +413,6 @@ body .loadingio-spinner-eclipse-rjtqitvukue {
   margin: 0 auto;
   margin-left: 10px;
 }
-
 #bottom_song_play .left-bar .desc h1 {
   color: #fff;
   margin: inherit;
@@ -434,7 +420,6 @@ body .loadingio-spinner-eclipse-rjtqitvukue {
   font-size: 24px;
   margin-top: 5px;
 }
-
 #bottom_song_play .left-bar .desc h5 {
   color: rgba(255, 255, 255, 0.596);
   font-size: 20px;

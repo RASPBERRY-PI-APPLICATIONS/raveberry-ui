@@ -387,14 +387,7 @@ $(function () {
         revealX()
         previous_and_next_Music()
     }
-    /* -------------------------- END -------------------------------------------------------- */
-
-    /* ------------------  SHOW MORE BUTTON ON THE TABLE'S UI ------------------------------- */
-
-    show_more.addEventListener("click", () => {
         if (document.querySelector("tr")) clearObject("tbody tr");
-
-        if ($("#show_more i").hasClass("fa fa-angle-down")) {
             $("#show_more i").removeClass("fa-angle-down");
             loadMusic(false);
             bottom_bar_display();
@@ -473,14 +466,8 @@ $(function () {
         }
 
         ForwardBtns(nextBtn);
-        BackBtns(prevBtn);
     }
 
-    function ForwardBtns(btnPlus) {
-        btnPlus.addEventListener("click", () => {
-            console.log("clicked");
-            $("#bottom_song_play").css("display", "flex");
-            index_playing++;
             if (!(index_playing > allMusic.length)) {
                 bottom_song_display(index_playing);
                 audio.src = `${audio_root}${allMusic[index_playing].src}`;
