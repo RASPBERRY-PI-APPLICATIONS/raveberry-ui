@@ -6,96 +6,75 @@
    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
    <meta charset="UTF-8" />
    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-   <link rel="shortcut icon" href="img/S4L_CS6_page_01.png" type="image/x-icon" />
+   <link rel="shortcut icon" href="./img/d.jpg" type="image/x-icon" />
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-   <link href="cdns/bootstrap/bootstrap.min.css" rel="stylesheet" />
-   <link href="cdns/material-icon/material_icon.css" rel="stylesheet" />
    <link rel="stylesheet" href="cdns/font_awesome/font_awesome.css" />
-   <link rel="stylesheet" href="CSS/loader.css" />
    <link rel="stylesheet" href="CSS/style.css" />
-   <link rel="stylesheet" href="CSS/display.css">
    <noscript>this file cannot work without JavaScript</noscript>
    <title>ravberry ui</title>
-   <!-- <link rel="stylesheet" href="CSS/style.min.css" /> -->
 </head>
 
 <body>
-   <!-- <div class="loadingio-spinner-eclipse-rjtqitvukue">
-      <div class="ldio-ups48w9xyi">
-         <div></div>
-      </div>
-   </div> -->
-   <div class="body-wrapper">
-      <div class="display-wrapper">
-         <div class="container-fluid">
-            <div class="row">
-               <div class="col-md-12 animate__animated animate__slow animate__flipInX">
-                  <h1 title="best of selected hits">your best hits</h1>
-                  <div title="festify link" class="part-2">
-                     <a href="https://festify.us" target="_blank">add your songs on www.festify.us!</a>
-                     <span title="party code">part code : 74734</span>
-                  </div>
-                  <hr>
-               </div>
-               <div class="col-md-12" id="play_list">
-                  <div class="top-level">
-                     <div class="search">
-                        <input type="search" name="" id="search" class="form-control" value="" placeholder="search song"
-                           title="search songs">
-                        <i class="fa fa-search"></i>
-                     </div>
-                     <div id="lights">
-                        <i class="fa fa-lightbulb-o"></i>
-                        <i class="fa fa-deviantart"></i>
-                     </div>
-                  </div>
-                  <table class="table " id="table_song">
+   <div class="body_wrapper">
+      <div class="content_wrapper">
+         <div class="search_wrapper" title="search">
+            <i id="search_icon" class="fa fa-search"></i>
+            <input type="text" placeholder="search the playlist" id="search_input" minlength="6" />
+            <div id="search_list" title="search result"></div>
+         </div>
+         <div class="song_wrapper">
+            <div class="song_details" title="current song selected"></div>
+
+            <div class="song_list">
+               <h2 title="your playlist">Your Playlist</h2>
+
+               <div class="table-responsive">
+                  <table class="table table-hover" id="table_list" title="song table list">
                      <thead>
-                        <tr>
-                           <!-- <th></th> -->
+                        <tr class="border_bottom">
+                           <th>#</th>
+                           <th>play</th>
+                           <th>cover</th>
+                           <th>song</th>
+                           <th>title</th>
+                           <th>time</th>
+                           <!-- <th>action</th> -->
                         </tr>
                      </thead>
                      <tbody>
-                        <tr>
-                           <td><img src="./pics/blog.jpg" alt=""> </td>
-                           <td>ed sheeran - <small>perfect</small><br>
-                              <p>3.00</p>
-                           </td>
-                           <td> <i class="fa fa-trash"></i>
-                              <i class="fa fa-level-up"></i><i class="fa fa-angle-down"></i>
-                              <i class="fa fa-angle-up"></i>
-                           </td>
-                        </tr>
-                        <tr>
-                           <td><img src="./pics/blog.jpg" alt=""> </td>
-                           <td>ed sheeran - <small>perfect</small><br>
-                              <p>3.00</p>
-                           </td>
-                           <td> <i class="fa fa-trash"></i>
-                              <i class="fa fa-level-up"></i><i class="fa fa-angle-down"></i>
-                              <i class="fa fa-angle-up"></i>
-                           </td>
-                        </tr>
                      </tbody>
                   </table>
                </div>
+               <p id="show_more" title="show more">show more <i class="fa fa-angle-down"></i></p>
             </div>
          </div>
+
       </div>
-      <div class="settings-wrapper" title="playlist hits ">
-         <a href="./play.html">
-            <i class="fa fa-music"></i></a>
-         <a href="./setting.html">
-            <i class="fa fa-gear"></i></a><a href="./setting.html">
-            <i class="fa fa-expand"></i></a>
+      <div class="settings_wrapper">
+         <i title="music settings" class="fa fa-music"></i>
+         <i title="spotify switch" class="fa fa-spotify"></i>
+         <i title="youtube switch" class="fa fa-youtube-play"></i>
+         <i title=" settings" class="fa fa-gear"></i>
       </div>
    </div>
+   <audio id="audio-playing" src=""></audio>
+   <div id="bottom_song_play" title="current playing song">
+      <div class="duration-bar" title="duration of current song">
+         <div id="progress_bar" title="duration of the song playing"></div>
+      </div>
+      <div class="left-bar"></div>
+      <div class="middle-bar">
+         <i class="fa fa-step-backward"></i>
+         <i class="fa fa-pause"></i>
+         <i class="fa fa-step-forward"></i>
+         <i class="fa fa-arrows-repeat"></i>
+      </div>
 
+   </div>
    <script src="cdns/jquery.js"></script>
-   <script src="cdns/bootstrap/bootstrap.min.js"></script>
    <script src="cdns/font_awesome/font_awesome.js"></script>
-   <!-- <script src="JS/jquery.js"></script> -->
-   <!-- <script src="JS/websocket.js"></script> -->
+   <script src="cdns/bootstrap/bootstrap.min.js"></script>
+   <script src="JS/script.js"></script>
 </body>
 
 </html>
