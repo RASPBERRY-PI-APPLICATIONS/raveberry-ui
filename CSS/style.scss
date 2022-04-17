@@ -234,7 +234,7 @@ body .loadingio-spinner-eclipse-rjtqitvukue {
             @extend .scroll;
             display: inline-block;
             border-collapse: collapse;
-            min-width: 500px;
+            min-width: 300px;
             color: #fff;
             text-align: center;
             font-family: $comforta;
@@ -305,6 +305,9 @@ body .loadingio-spinner-eclipse-rjtqitvukue {
                         }
                      }
                   }
+                  .audio-duration{
+                     padding: 5px 30px;
+                  }
                }
             }
          }
@@ -312,8 +315,11 @@ body .loadingio-spinner-eclipse-rjtqitvukue {
 
       #show_more {
          color: #fff;
+         width: 50%;
+         min-width: 100px;
+         transform: translate(10%, 0%);
          font-size: 35px;
-         margin: 70px;
+         margin: 70px auto;
          text-align: center;
          padding: 30px;
          cursor: pointer;
