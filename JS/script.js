@@ -1,99 +1,55 @@
 let allMusic = [{
         name: "Hold On",
         src: "Chord_Overstreet_Hold_On_Lyric_Video.mp3",
-        img: "d.jpg",
+        img: "holdon.jpeg",
         artist: "Chord Overstreet",
-        background_image: "Abstract-Flowers-Wallpapers-for-Free-Download.jpg"
+        background_image: "holdon.jpeg"
     },
     {
         name: "Someone Like You",
         src: "Adele_Someone_Like_You_Official_Music_Video.mp3",
-        img: "a.jpg",
+        img: "adele.png",
         artist: "Adele",
-        background_image: "6925538-pink-butterfly-wallpaper.jpg"
+        background_image: "adele.jpeg"
     },
     {
         name: "Merry Christmas",
         src: "Ed_Sheeran_Elton_John_Merry_Christmas_Official_Video.mp3",
-        img: "y.jpg",
+        img: "download.gif",
         artist: "Ed Sheeran ft.  Elton",
-        background_image: "blog.jpg"
+        background_image: "overpass.png"
     },
 
     {
         name: " overpass",
         src: "Ed_Sheeran_Overpass_Graffiti_Offical_Audio.mp3",
-        img: "d.jpg",
-        artist: "Chord Overstreet",
-        background_image: "Screenshot_2019-12-20 Instagram.png"
-    },
-    {
-        name: "Love Nwantiti",
-        src: "ElGrandeToto_Love_Nwantiti_ft_Ckay.mp3",
-        img: "a.jpg",
-        artist: "ElGrandeToto",
-        background_image: "graphics-music-notes-435227.jpg"
+        img: "overpassimg.png",
+        artist: "Ed Sheeran",
+        background_image: "overpass.png"
     },
     {
         name: "Kenn Rogers",
-        src: "../audio/Gambler-Kenn_Rogers.mp3",
-        img: "d.jpg",
+        src: "Gambler-Kenn_Rogers.mp3",
+        img: "kennyRodgers.jpeg",
         artist: "Gambler",
-        background_image: ""
-    },
-    {
-        name: "Gym Class Heroes",
-        src: "../audio/Gym_Class_Heroes_Stereo_Hearts_ft_Adam_Levine_OFFICIAL_VIDEO.mp3",
-        img: "y.jpg",
-        artist: "Hearts ft Adam Levine",
-        background_image: ""
-    },
-    {
-        name: "How Long Will I Love You",
-        src: "../audio/How_Long_Will_I_Love_You-Ellie_Goulding.mp3",
-        img: "a.jpg",
-        artist: "Ellie Goulding",
-        background_image: ""
+        background_image: "kennyRodgers.jpeg"
     },
     {
         name: " I Want It That Way",
-        src: "../audio/I_Want_It_That_Way-Backstreet_Boys.mp3",
-        img: "d.jpg",
+        src: "../audio/I_Want_It_That_Way-Backstreet Boys.mp3",
+        img: "download.jpeg",
         artist: "Backstreet Boys",
-        background_image: ""
-    },
-    {
-        name: "Good Life from The Fate of the Furious",
-        src: "../audio/Kehlani_GEazy_Good_Life_from_The_Fate_of_the_Furious_The_Album_Official_Video.mp3",
-        img: "x.jpg",
-        artist: "Kehlani GEazy",
-        background_image: ""
+        background_image: "backstreet.jpeg"
     },
 
-    // stop --------------------------------------------------------------------
     {
         name: "Payphone",
-        src: "../audio/Maroon_5_Payphone_ft_Wiz_Khalifa_Explicit_Official_Music_Video.mp3",
-        img: "d.jpg",
+        src: "MaroonPayphone.mp3",
+        img: "payphone.jpeg",
         artist: "Maroon 5 ft Wiz Khalifa",
-        background_image: ""
-    },
-    {
-        name: "memories",
-        src: "../audio/Maroon_5-Memories(720X1280).mp3",
-        img: "y.jpg",
-        artist: "maroon",
-        background_image: ""
-    },
-    {
-        name: "Still Into You",
-        src: "Paramore_Still_Into_You_OFFICIAL_VIDEO.mp3",
-        img: "y.jpg",
-        artist: "paramount",
-        background_image: ""
+        background_image: "payphone.jpeg"
     }
 ];
-
 const searchBtn = document.getElementById("search_icon"),
     search_input = document.getElementById("search_input"),
     search_list = document.querySelector("#search_list"),
@@ -198,9 +154,12 @@ $(function () {
     /* ------------ bottom bar display --------- */
     function bottomBar(i) {
         $("#bottom_song_play").css("display", "flex");
+        let gradient = ` linear-gradient(180deg,rgba(0, 0, 0, 0) 40%,rgba(0, 0, 0, 0.52) 50%,rgb(0, 0, 0) 70%)  0 0/cover no-repeat fixed,`;
 
+        $(body).css("background", `${gradient} url("${bg_root}${allMusic[i].background_image}")  0 0/cover no-repeat fixed`);
         audio.src = `./audio/${allMusic[i].src}`;
         audio.play();
+        isMusicPlay()
         bottom_song_display(i)
 
     }
@@ -258,22 +217,20 @@ $(function () {
         document.querySelectorAll("tbody .fa-play").forEach((e, i) => {
             e.addEventListener("click", () => {
                 currentIndex = i;
-
                 bottomBar(i);
-
-                let gradient = ` linear-gradient(180deg,rgba(0, 0, 0, 0) 40%,rgba(0, 0, 0, 0.52) 50%,rgb(0, 0, 0) 70%)  0 0/cover no-repeat fixed,`;
-
-                $(body).css("background", `${gradient} url("${bg_root}${allMusic[i].background_image}")  0 0/cover no-repeat fixed`);
-                let isMusicPlay = playBtn.classList.contains("fa-play");
-                if (isMusicPlay) {
-                    $(playBtn).removeClass("fa-play")
-                    $(playBtn).addClass("fa-pause")
-                }
+                isMusicPlay();
             });
         });
 
     }
 
+    function isMusicPlay() {
+        let isMusicPlay = playBtn.classList.contains("fa-play");
+        if (isMusicPlay) {
+            $(playBtn).removeClass("fa-play")
+            $(playBtn).addClass("fa-pause")
+        }
+    }
     /* --------  toggle visibility with the top x button -------------- */
 
     function toggleXButton() {
@@ -330,12 +287,14 @@ $(function () {
     }
 
     function nextMusic() {
+        isMusicPlay()
         currentIndex++;
         currentIndex >= allMusic.length ? (currentIndex = 1) : (currentIndex = currentIndex);
         bottomBar(currentIndex)
     }
 
     function previousMusic() {
+        isMusicPlay()
         currentIndex--;
         currentIndex < 0 ? (currentIndex = (allMusic.length - 1)) : (currentIndex = currentIndex);
         bottomBar(currentIndex)
@@ -347,10 +306,10 @@ $(function () {
     function repeatMusic() {
         let repeatBtn_ = document.querySelector("#repeat "),
             repeatBtn = document.querySelector("#repeat i");
-        // $(repeatBtn_).css({
-        //     "background": "white",
-        //     "color": "black"
-        // });
+        $(repeatBtn_).css({
+            "background": "white",
+            "color": "black"
+        });
         // if (repeatBtn.classList.contains("fa-repeat")) {
         //     repeatBtn.setAttribute("title", "Song loop");
         //     repeatBtn_.innerHTML = `refresh <i class="fa fa-refresh"></i>`
@@ -369,6 +328,7 @@ $(function () {
         // }
         audio.addEventListener("ended", () => {
             if (repeatBtn.classList.contains("fa-repeat")) {
+
                 nextMusic()
             }
             // else if (repeatBtn.classList.contains("fa-refresh")) {
@@ -386,57 +346,12 @@ $(function () {
             // }
         });
     }
-
-
-
-
-
-    const clearSearch = () => {
-        search_input.value = "";
-    };
-
     search_input.addEventListener("keyup", () => {
         clearObject("#search_list span");
         callListSelection(search_input.value);
     });
-
-    document.addEventListener("click", (event) => {
-        event.path.forEach((element) => {
-            if (
-                !(event.path[element] == document.querySelector(".search_wrapper"))
-            ) {
-                $(search_list).css("display", "none");
-            }
-        });
-    });
-
-    const filterSearch = list => {
-        //  list.reduce((arg, current) => {
-        //      let newlist = []
-        //         return arg == current ? ' ': arg;
-        //     })
-
-        // console.log(list);
-        list.forEach((element, i) => {
-            // console.log(element);
-            search_list.insertAdjacentHTML("beforeend", `<span>${element.item}</span>`);
-
-        });
-        // console.log(search_list.childNodes);
-        search_list.childNodes.forEach(e => {
-            e.addEventListener("click", () => {
-                search_input.value = e.innerHTML;
-                console.log(e.innerHTML);
-
-                for (let index = 0; index < list.length; index++) {
-
-                    if (e.innerHTML == `${allMusic[list[index].index].name} - ${allMusic[list[index].index].artist}`) {
-                        console.log(list[index].index);
-                        bottom_bar_display(list[index].index)
-                    }
-                }
-            })
-        })
+    const clearSearch = () => {
+        search_input.value = "";
     };
 
     function callListSelection(result) {
@@ -462,18 +377,45 @@ $(function () {
             }
         });
 
-        filterSearch(list);
-
+        const newList = list.filter((value, index, self) =>
+            index === self.findIndex((t) => (
+                t.index === value.index
+            ))
+        )
+        filterSearch(newList);
         $(search_list).css("display", "block");
     }
-    searchBtn.addEventListener("click", () => {
-        console.log(search_input.value);
-        clearSearch();
+    //  searchBtn.addEventListener("click", () => {
+    //     console.log(search_input.value);
+    //     clearSearch();
+    //  });
+    document.addEventListener("click", (event) => {
+        event.path.forEach((element) => {
+            if (
+                !(event.path[element] == document.querySelector(".search_wrapper"))
+            ) {
+                $(search_list).css("display", "none");
+            }
+        });
     });
+    const filterSearch = list => {
+        list.forEach((element, i) => {
+            search_list.insertAdjacentHTML("beforeend", `<span>${element.item}</span>`);
 
+        });
+        search_list.childNodes.forEach(e => {
+            e.addEventListener("click", () => {
+                search_input.value = e.innerHTML;
+                console.log(e.innerHTML);
 
+                for (let index = 0; index < list.length; index++) {
 
-
-
-
+                    if (e.innerHTML == `${allMusic[list[index].index].name} - ${allMusic[list[index].index].artist}`) {
+                        currentIndex = list[index].index;
+                        bottomBar(currentIndex)
+                    }
+                }
+            })
+        })
+    };
 });
