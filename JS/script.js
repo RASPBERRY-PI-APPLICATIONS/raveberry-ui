@@ -1,123 +1,54 @@
 let allMusic = [{
         name: "Hold On",
         src: "Chord_Overstreet_Hold_On_Lyric_Video.mp3",
-        img: "d.jpg",
+        img: "holdon.jpeg",
         artist: "Chord Overstreet",
-        background_image: "Abstract-Flowers-Wallpapers-for-Free-Download.jpg"
+        background_image: "holdon.jpeg"
     },
     {
         name: "Someone Like You",
         src: "Adele_Someone_Like_You_Official_Music_Video.mp3",
-        img: "a.jpg",
+        img: "adele.png",
         artist: "Adele",
-        background_image: "6925538-pink-butterfly-wallpaper.jpg"
+        background_image: "adele.jpeg"
     },
     {
         name: "Merry Christmas",
         src: "Ed_Sheeran_Elton_John_Merry_Christmas_Official_Video.mp3",
-        img: "y.jpg",
+        img: "download.gif",
         artist: "Ed Sheeran ft.  Elton",
-        background_image: "blog.jpg"
+        background_image: "overpass.png"
     },
 
     {
         name: " overpass",
         src: "Ed_Sheeran_Overpass_Graffiti_Offical_Audio.mp3",
-        img: "d.jpg",
-        artist: "Chord Overstreet",
-        background_image: "Screenshot_2019-12-20 Instagram.png"
+        img: "overpassimg.png",
+        artist: "Ed Sheeran",
+        background_image: "overpass.png"
     },
-    {
-        name: "Love Nwantiti",
-        src: "ElGrandeToto_Love_Nwantiti_ft_Ckay.mp3",
-        img: "a.jpg",
-        artist: "ElGrandeToto",
-        background_image: "graphics-music-notes-435227.jpg"
-    },
+  
     {
         name: "Kenn Rogers",
-        src: "../audio/Gambler-Kenn_Rogers.mp3",
-        img: "d.jpg",
+        src: "Gambler-Kenn_Rogers.mp3",
+        img: "kennyRodgers.jpeg",
         artist: "Gambler",
-        background_image: ""
+        background_image: "kennyRodgers.jpeg"
     },
     {
-        name: "Gym Class Heroes",
-        src: "../audio/Gym_Class_Heroes_Stereo_Hearts_ft_Adam_Levine_OFFICIAL_VIDEO.mp3",
-        img: "y.jpg",
-        artist: "Hearts ft Adam Levine",
-        background_image: ""
+        name: " I Want It That Way",
+        src: "../audio/I_Want_It_That_Way-Backstreet Boys.mp3",
+        img: "download.jpeg",
+        artist: "Backstreet Boys",
+        background_image: "backstreet.jpeg"
     },
 
     {
-        name: "How Long Will I Love You",
-        src: "../audio/Etana_Weakness_In_Me(1).mp3",
-        img: "a.jpg",
-        artist: "Ellie Goulding",
-        background_image: ""
-    },
-    {
-        name: " I Want It That Way",
-        src: "../audio/NVIIRI-THE-STORYTELLER-POMBE-SIGARA.mp3",
-        img: "d.jpg",
-        artist: "Backstreet Boys",
-        background_image: ""
-    },
-    {
-        name: "Good Life from The Fate of the Furious",
-        src: "../audio/One Call Away Acoustic - Charlie Puth.mp3",
-        img: "x.jpg",
-        artist: "Kehlani GEazy",
-        background_image: ""
-    },
-    {
         name: "Payphone",
-        src: "../audio/Rayvanny Ft Zuchu - Number One (Official Video).mp3",
-        img: "d.jpg",
+        src: "MaroonPayphone.mp3",
+        img: "payphone.jpeg",
         artist: "Maroon 5 ft Wiz Khalifa",
-        background_image: ""
-    },
-    {
-        name: "memories",
-        src: "../audio/Otile Brown & Sanaipei Tande - Chaguo La Moyo (Official Video) Sms skiza 7300557 to 811.mp3",
-        img: "y.jpg",
-        artist: "maroon",
-        background_image: ""
-    },
-    {
-        name: "How Long Will I Love You",
-        src: "../audio/How_Long_Will_I_Love_You-Ellie_Goulding.mp3",
-        img: "a.jpg",
-        artist: "Ellie Goulding",
-        background_image: ""
-    },
-    {
-        name: " I Want It That Way",
-        src: "../audio/I_Want_It_That_Way-Backstreet_Boys.mp3",
-        img: "d.jpg",
-        artist: "Backstreet Boys",
-        background_image: ""
-    },
-    {
-        name: "Good Life from The Fate of the Furious",
-        src: "../audio/Kehlani_GEazy_Good_Life_from_The_Fate_of_the_Furious_The_Album_Official_Video.mp3",
-        img: "x.jpg",
-        artist: "Kehlani GEazy",
-        background_image: ""
-    },
-    {
-        name: "Payphone",
-        src: "../audio/Maroon_5_Payphone_ft_Wiz_Khalifa_Explicit_Official_Music_Video.mp3",
-        img: "d.jpg",
-        artist: "Maroon 5 ft Wiz Khalifa",
-        background_image: ""
-    },
-    {
-        name: "memories",
-        src: "../audio/Maroon_5-Memories(720X1280).mp3",
-        img: "y.jpg",
-        artist: "maroon",
-        background_image: ""
+        background_image: "payphone.jpeg"
     }
 ];
 const searchBtn = document.getElementById("search_icon"),
@@ -481,7 +412,7 @@ $(function () {
                 for (let index = 0; index < list.length; index++) {
 
                     if (e.innerHTML == `${allMusic[list[index].index].name} - ${allMusic[list[index].index].artist}`) {
-                        currentIndex=list[index].index;
+                        currentIndex = list[index].index;
                         bottomBar(currentIndex)
                     }
                 }
