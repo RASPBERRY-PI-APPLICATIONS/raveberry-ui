@@ -27,7 +27,6 @@ let allMusic = [{
         artist: "Ed Sheeran",
         background_image: "overpass.png"
     },
-
     {
         name: "Kenn Rogers",
         src: "Gambler-Kenn_Rogers.mp3",
