@@ -47,19 +47,59 @@
                </div>
             </div>
          </div>
-         <div class="song-content">
-            <div class="song-wrapper">
-               <img src="./pics/FNjLPdIVkAMEKPV.jpeg" alt="" />
-               <h3>where are you now</h3>
-               <span>lost frequencies feat caelum scott</span>
-            </div>
-            <div class="song-wrapper">
-               <img src="./pics/FNjLPdIVkAMEKPV.jpeg" alt="" />
-               <h3>where are you now</h3>
-               <span>lost frequencies feat caelum scott</span>
+         <div class="song_wrapper">
+            <div class="song_details" title="current song selected"></div>
+
+            <div class="song_list">
+               <h2 title="your playlist">Your Playlist</h2>
+
+               <div class="table-responsive">
+                  <table class="table table-hover" id="table_list" title="song table list">
+                     <thead>
+                        <tr class="border_bottom">
+                           <th>#</th>
+                           <th>play</th>
+                           <th>cover</th>
+                           <th>song</th>
+                           <th>title</th>
+                           <th>time</th>
+                           <!-- <th>action</th> -->
+                        </tr>
+                     </thead>
+                     <tbody>
+                     </tbody>
+                  </table>
+               </div>
+               <p id="show_more" title="show more">show more <i class="fa fa-angle-down"></i></p>
             </div>
          </div>
+
       </div>
-      <script src="JS/script.js"></script>
-   </body>
+      <div class="settings_wrapper">
+         <i title="music settings" class="fa fa-music"></i>
+         <i title="spotify switch" class="fa fa-spotify"></i>
+         <i title="youtube switch" class="fa fa-youtube-play"></i>
+         <i title=" settings" class="fa fa-gear"></i>
+      </div>
+   </div>
+   <audio id="audio-playing" src=""></audio>
+   <div id="bottom_song_play" title="current playing song">
+      <div class="duration-bar" title="duration of current song">
+         <div id="progress_bar" title="duration of the song playing"></div>
+      </div>
+      <div class="left-bar"></div>
+      <div class="middle-bar">
+         <i class="fa fa-step-backward"></i>
+         <i class="fa fa-pause"></i>
+         <i class="fa fa-step-forward"></i>
+         <i class="fa fa-arrows-repeat"></i>
+      </div>
+
+   </div>
+   <script src="cdns/jquery.js"></script>
+   <script src="cdns/font_awesome/font_awesome.js"></script>
+   <script src="cdns/bootstrap/bootstrap.min.js"></script>
+   <script src="JS/script.js"></script>
+</body>
+
 </html>
