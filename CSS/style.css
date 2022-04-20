@@ -8,6 +8,11 @@
   text-transform: capitalize;
 }
 
+.toggle {
+  background: white !important;
+  color: black !important;
+}
+
 body {
   background: linear-gradient(180deg, transparent 40%, rgba(0, 0, 0, 0.52) 50%, #000 70%) 0 0/cover no-repeat fixed, url("../img/i.jpg") 0 0/cover no-repeat fixed;
 }

@@ -110,7 +110,16 @@ $(function () {
 
     window.addEventListener("load", loadMusic(3));
     /* --- END --------------------------------------------- */
-
+    audio.addEventListener("ended", ()=>{
+        let refreshBtn_ = document.querySelector("#refresh ");
+        if (refreshBtn_.classList.contains("1")) {
+            audio.currentTime = 0
+            bottomBar(currentIndex)
+        }else{
+            nextMusic()
+        }
+    })
+   
     /* ----- prevents repetition onto the ui table ------- */
     function clearObject(arg) {
         const tr = document.querySelectorAll(arg);
@@ -177,7 +186,7 @@ $(function () {
                                                 <hr />
                                                 <h3 id="artist" title="artist">${allMusic[i].artist}</h3>
                                                 <button class="repeat" id="backwardBtn">previous <i class="fa fa-step-backward"></i></button>
-                                                <button class="repeat" id="repeat">repeat <i class="fa fa-repeat"></i></button>
+                                                <button class="repeat" id="refresh">refresh <i class="fa fa-random"></i></button>
                                                 <button class="repeat"  id="forwardBtn">next <i class="fa fa-step-forward"></i></button>
                                             </div> 
                                             <div class="ex-button">x</div>`
@@ -201,12 +210,12 @@ $(function () {
             bottom_song_display(i);
         }
         let backwardBtn = document.querySelector("#backwardBtn"),
-            repeatBtn = document.querySelector("#repeat"),
+            refreshBtn = document.querySelector("#refresh"),
             forwardBtn = document.querySelector("#forwardBtn");
 
         if (backwardBtn) backwardBtn.addEventListener("click", previousMusic);
         if (forwardBtn) forwardBtn.addEventListener("click", nextMusic);
-        if (repeatBtn) repeatBtn.addEventListener("click", repeatMusic);
+        if (refreshBtn) refreshBtn.addEventListener("click", repeatMusic);
         toggleXButton()
 
 
@@ -304,18 +313,18 @@ $(function () {
     prevBtn.addEventListener("click", previousMusic);
 
     function repeatMusic() {
-        let repeatBtn_ = document.querySelector("#repeat "),
-            repeatBtn = document.querySelector("#repeat i");
-        $(repeatBtn_).css({
-            "background": "white",
-            "color": "black"
-        });
+        let refreshBtn_ = document.querySelector("#refresh ");
+        refreshBtn_.classList.remove("repeat")
+        refreshBtn_.classList.toggle("toggle");
+        refreshBtn_.classList.toggle("1");
+            //let refreshBtn = document.querySelector("#refresh i");
+    
         // if (repeatBtn.classList.contains("fa-repeat")) {
         //     repeatBtn.setAttribute("title", "Song loop");
         //     repeatBtn_.innerHTML = `refresh <i class="fa fa-refresh"></i>`
 
         // } else if (repeatBtn.classList.contains("fa-refresh")) {
-        //     repeatBtn_.innerHTML = `shuffle <i class="fa fa-random"></i>`
+        //     repeatBtn_.innerHTML = `refresh <i class="fa fa-random"></i>`
         //     repeatBtn.setAttribute("title", "Playlist loop");
 
         // } else if (repeatBtn.classList.contains("fa-random")) {
@@ -327,15 +336,15 @@ $(function () {
         //     repeatBtn.setAttribute("title", "Playlist loop");
         // }
         audio.addEventListener("ended", () => {
-            if (repeatBtn.classList.contains("fa-repeat")) {
-
-                nextMusic()
-            }
-            // else if (repeatBtn.classList.contains("fa-refresh")) {
+            // if (repeatBtn.classList.contains("fa-repeat")) {
+            //     nextMusic()
+            // }
+            // else 
+            // if (refreshBtn.classList.contains("1")) {
             //     audio.currentTime = 0
             //     bottomBar(currentIndex)
-
-            // } else if (repeatBtn.classList.contains("fa-random")) {
+            // }
+            // else if (repeatBtn.classList.contains("fa-random")) {
             //     let randIndex = Math.floor(Math.random() * allMusic.length + 1);
             //     do {
             //         randIndex = Math.floor(Math.random() * allMusic.length + 1);
@@ -346,6 +355,7 @@ $(function () {
             // }
         });
     }
+ 
     search_input.addEventListener("keyup", () => {
         clearObject("#search_list span");
         callListSelection(search_input.value);
@@ -389,8 +399,8 @@ $(function () {
     //     console.log(search_input.value);
     //     clearSearch();
     //  });
-    document.addEventListener("click", (event) => {
-        event.path.forEach((element) => {
+    document.addEventListener("click", event => {
+        event.path.forEach(element => {
             if (
                 !(event.path[element] == document.querySelector(".search_wrapper"))
             ) {
