@@ -1,38 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <meta charset="UTF-8" />
-      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <link
-         rel="shortcut icon"
-         href="img/S4L_CS6_page_01.png"
-         type="image/x-icon"
-      />
-      <link href="cdns/bootstrap/bootstrap.min.css" rel="stylesheet" />
-      <link href="cdns/material-icon/material_icon.css" rel="stylesheet" />
-      <link rel="stylesheet" href="cdns/font_awesome/font_awesome-_s.css" />
-      <link rel="stylesheet" href="cdns/font_awesome/font_awesome.css" />
-      <noscript>this file cannot work without JavaScript</noscript>
-      <title>ravberry ui</title>
-      <link rel="stylesheet" href="CSS/style.min.css" />
-      <link rel="stylesheet" href="CSS/style.css" />
-   </head>
-   <body>
-      <div class="body-wrapper">
-         <div class="img-content">
-            <div class="img">
-               <img src="./pics/FNjLPdIVkAMEKPV.jpeg" alt="" />
-            </div>
-            <div class="description">
-               <div class="part-1">
-                  <h1>Cold heart - PNAU Remix</h1>
-                  <h2>ELton John feat. Dua Lipa & PNAU</h2>
-               </div>
-               <div class="part-2">
-                  <p>add your songs on www.festify.us!</p>
-                  <span>part code : 74734</span>
+
+<head>
+   <meta charset="UTF-8" />
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <link rel="shortcut icon" href="./img/overpassimg.png" type="image/x-icon" />
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+   <link rel="stylesheet" href="cdns/font_awesome/font_awesome.css" />
+   <link rel="stylesheet" href="CSS/style.css" />
+   <noscript>this file cannot work without JavaScript</noscript>
+   <title>ravberry ui</title>
+</head>
+
+<body>
+   <div class="body_wrapper">
+      <div class="content_wrapper">
+         <div class="search_wrapper" title="search">
+            <i id="search_icon" class="fa fa-search"></i>
+            <input type="text" placeholder="search the playlist" id="search_input" minlength="6" />
+            <div id="search_list" title="search result"></div>
+         </div>
+         <div class="song_wrapper">
+            <div class="song_details" title="current song selected"></div>
+
+            <div class="song_list">
+               <h2 title="your playlist">Your Playlist</h2>
+
+               <div class="table-responsive">
+                  <table class="table table-hover" id="table_list" title="song table list">
+                     <thead>
+                        <tr class="border_bottom">
+                           <th>#</th>
+                           <th>play</th>
+                           <th>cover</th>
+                           <th>title</th>
+                           <th>artist</th>
+                           <th>time</th>
+                           <!-- <th>action</th> -->
+                        </tr>
+                     </thead>
+                     <tbody>
+                     </tbody>
+                  </table>
                </div>
             </div>
          </div>
