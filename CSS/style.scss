@@ -19,7 +19,8 @@ $comforta : "comfortaa";
 }
 
 body {
-   background: linear-gradient(180deg, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, .52) 50%, #000 70%) 0 0/cover no-repeat fixed, url("../img/i.jpg") 0 0/cover no-repeat fixed;
+   // background: linear-gradient(180deg, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, .52) 50%, #000 70%) 0 0/cover no-repeat fixed, url("../img/i.jpg") 0 0/cover no-repeat fixed;
+   background-color: rgb(65, 49, 80);
 
    &::-webkit-scrollbar {
       width: 0px;
@@ -73,84 +74,84 @@ body .loadingio-spinner-eclipse-rjtqitvukue {
    align-items: flex-start;
    justify-content: space-between;
    margin: 5%;
-   @extend .common-blur;
+   // @extend .common-blur;
 }
 
 .content_wrapper {
    width: 80%;
    padding: 30px;
 
-   .search_wrapper {
-      @extend .common-blur;
-      @extend .flexDisplay;
-      max-width: 700px;
-      width: 70%;
-      margin: 0 auto;
-      padding: 10px;
-      margin-bottom: 50px;
-      position: relative;
+   // .search_wrapper {
+   //    @extend .common-blur;
+   //    @extend .flexDisplay;
+   //    max-width: 700px;
+   //    width: 70%;
+   //    margin: 0 auto;
+   //    padding: 10px;
+   //    margin-bottom: 50px;
+   //    position: relative;
 
-      #search_list {
-         position: absolute;
-         top: 60px;
-         color: rgb(0, 0, 0);
-         font-family: cursive;
-         display: none;
-         background: rgb(243, 243, 243);
-         width: 100%;
-         border-radius: 5px;
-         padding: 10px 40px;
-         @extend .scroll;
-         box-shadow: 2px 3px 3px 3px rgba(0, 0, 0, 0.404);
-         max-height: 350px;
-         z-index: 90;
+   //    #search_list {
+   //       position: absolute;
+   //       top: 60px;
+   //       color: rgb(0, 0, 0);
+   //       font-family: cursive;
+   //       display: none;
+   //       background: rgb(243, 243, 243);
+   //       width: 100%;
+   //       border-radius: 5px;
+   //       padding: 10px 40px;
+   //       @extend .scroll;
+   //       box-shadow: 2px 3px 3px 3px rgba(0, 0, 0, 0.404);
+   //       max-height: 350px;
+   //       z-index: 90;
 
-         span {
-            display: block;
-            border-top: 1px solid rgba(0, 0, 0, 0.075);
-            font-size: 20px;
-            padding: 15px;
-            text-transform: capitalize;
-            cursor: pointer;
+   //       span {
+   //          display: block;
+   //          border-top: 1px solid rgba(0, 0, 0, 0.075);
+   //          font-size: 20px;
+   //          padding: 15px;
+   //          text-transform: capitalize;
+   //          cursor: pointer;
 
-            &:hover {
-               background: rgba(0, 0, 0, 0.301);
+   //          &:hover {
+   //             background: rgba(0, 0, 0, 0.301);
 
-            }
+   //          }
 
-            &:nth-child(1) {
-               border-top: none;
-            }
-         }
-      }
+   //          &:nth-child(1) {
+   //             border-top: none;
+   //          }
+   //       }
+   //    }
 
-      .fa {
-         @extend .text_shadow;
-         color: white;
-         font-size: 20px;
-         padding: 5px 15px;
-         margin-right: 0;
-         cursor: pointer;
-      }
+   //    .fa {
+   //       @extend .text_shadow;
+   //       color: white;
+   //       font-size: 20px;
+   //       padding: 5px 15px;
+   //       margin-right: 0;
+   //       cursor: pointer;
+   //    }
 
-      input {
-         outline: none;
-         width: 100%;
-         min-width: 50px;
-         max-width: 300px;
-         margin-left: 0;
-         height: 30px;
-         background: transparent;
-         border: none;
-         color: white;
-         font-size: 20px;
+   //    input {
+   //       outline: none;
+   //       width: 100%;
+   //       min-width: 50px;
+   //       max-width: 300px;
+   //       margin-left: 0;
+   //       height: 30px;
+   //       background: transparent;
+   //       border: none;
+   //       color: white;
+   //       font-size: 20px;
 
-         &::placeholder {
-            color: rgba(255, 255, 255, 0.74);
-            font-size: 18px;
-         }
-      }
-   }
+   //       &::placeholder {
+   //          color: rgba(255, 255, 255, 0.74);
+   //          font-size: 18px;
+   //       }
+   //    }
+   // }
 
    .song_wrapper {
       padding: 3% 0;

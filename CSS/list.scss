@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@200&family=BioRhyme:wght@200;300;400;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@100;200;300;400;500;700;800;900&display=swap');
+
+
+$bai : "bai";
+$comforta : "comfortaa";
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: $comforta;
+}
+
+body {
+    background: #2a2a57;
+    color: #ffffff;
+}
+
+.body-wrapper {
+    padding: 5% 2%;
+    text-transform: capitalize;
+}
+
+.song-detail {
+    display: flex;
+    justify-content: flex-start;
+    padding: 0 10%;
+    align-items: center;
+    width: 100%;
+
+    img {
+        height: 35vh;
+        box-shadow: 5px 8px 23px rgb(0, 0, 0);
+    }
+
+    .description {
+        margin-left: 5%;
+
+        #title {
+            font-size: 5vh;
+        }
+
+        hr {
+            margin: 5% 0;
+            background: rgb(95, 95, 95);
+            color: #4d4d4d;
+            width: 100%;
+            opacity: .4;
+        }
+
+        #artist {
+            font-size: 4vh;
+        }
+    }
+}
+
+.list-display {
+    margin-top: 5%;
+
+    ul {
+        list-style: none;
+
+        li {
+            margin: 0 2%;
+            display: inline-block;
+            position: relative;
+
+            img {
+                background: black;
+                width: 10vw;
+                height: 20vh;
+                box-shadow: 5px 5px 15px rgb(0, 0, 0);
+            }
+
+            .background {
+                background: #000000de;
+                position: absolute;
+                z-index: 10;
+                width: 10vw;
+                height: 20vh;
+                top: 0;
+            }
+
+            #songTitle {
+                text-align: left;
+                padding: 15% 5%;
+                font-size: 3vh;
+            }
+        }
+    }
+}
