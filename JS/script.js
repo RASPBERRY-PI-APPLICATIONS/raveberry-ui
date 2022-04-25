@@ -110,16 +110,16 @@ $(function () {
 
     window.addEventListener("load", loadMusic(3));
     /* --- END --------------------------------------------- */
-    audio.addEventListener("ended", ()=>{
+    audio.addEventListener("ended", () => {
         let refreshBtn_ = document.querySelector("#refresh ");
         if (refreshBtn_.classList.contains("1")) {
             audio.currentTime = 0
             bottomBar(currentIndex)
-        }else{
+        } else {
             nextMusic()
         }
     })
-   
+
     /* ----- prevents repetition onto the ui table ------- */
     function clearObject(arg) {
         const tr = document.querySelectorAll(arg);
@@ -298,7 +298,7 @@ $(function () {
     function nextMusic() {
         isMusicPlay()
         currentIndex++;
-        currentIndex >= allMusic.length ? (currentIndex = 1) : (currentIndex = currentIndex);
+        currentIndex >= allMusic.length ? (currentIndex = 0) : (currentIndex = currentIndex);
         bottomBar(currentIndex)
     }
 
@@ -317,8 +317,8 @@ $(function () {
         refreshBtn_.classList.remove("repeat")
         refreshBtn_.classList.toggle("toggle");
         refreshBtn_.classList.toggle("1");
-            //let refreshBtn = document.querySelector("#refresh i");
-    
+        //let refreshBtn = document.querySelector("#refresh i");
+
         // if (repeatBtn.classList.contains("fa-repeat")) {
         //     repeatBtn.setAttribute("title", "Song loop");
         //     repeatBtn_.innerHTML = `refresh <i class="fa fa-refresh"></i>`
@@ -355,7 +355,7 @@ $(function () {
             // }
         });
     }
- 
+
     search_input.addEventListener("keyup", () => {
         clearObject("#search_list span");
         callListSelection(search_input.value);
