@@ -2,78 +2,80 @@
 <html lang="en">
 
 <head>
-   <meta charset="UTF-8" />
-   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-   <meta charset="UTF-8" />
-   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-   <link rel="shortcut icon" href="./img/overpassimg.png" type="image/x-icon" />
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-   <link rel="stylesheet" href="cdns/font_awesome/font_awesome.css" />
-   <link rel="stylesheet" href="CSS/style.css" />
-   <noscript>this file cannot work without JavaScript</noscript>
-   <title>ravberry ui</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>song list</title>
+    <link rel="stylesheet" href="CSS/list.css">
 </head>
 
 <body>
-   <div class="body_wrapper">
-      <div class="content_wrapper">
-         <!-- <div class="search_wrapper" title="search">
-            <i id="search_icon" class="fa fa-search"></i>
-            <input type="text" placeholder="search the playlist" id="search_input" minlength="6" />
-            <div id="search_list" title="search result"></div>
-         </div> -->
-         <div class="song_wrapper">
-            <div class="song_details" title="current song selected"></div>
-
-            <div class="song_list">
-               <!-- <h2 title="your playlist">Your Playlist</h2> -->
-
-               <div class="table-responsive">
-                  <table class="table table-hover" id="table_list" title="song table list">
-                     <thead>
-                        <tr class="border_bottom">
-                           <th>#</th>
-                           <th>play</th>
-                           <th>cover</th>
-                           <th>title</th>
-                           <th>artist</th>
-                           <th>time</th>
-                           <!-- <th>action</th> -->
-                        </tr>
-                     </thead>
-                     <tbody>
-                     </tbody>
-                  </table>
-               </div>
-               <p id="show_more" title="show more">show more <i class="fa fa-angle-down"></i></p>
+    <!-- TODO:ADD html -->
+    <div class="body-wrapper">
+        <div class="song-detail">
+            <img src="https://img.youtube.com/vi/0qTQR92UuUA/0.jpg" alt="" id="photo">
+            <div class="description">
+                <h1 id="title">perfect - 3:40</h1> 
+                <h6 id="artist">ed sheeran </h6>
+                <hr>
+               <p>add your songs on fetify.us</p>
+               <p>link 74734</p>
             </div>
-         </div>
-      </div>
-      <!-- <div class="settings_wrapper">
-         <i title="music settings" class="fa fa-music"></i>
-         <i title="spotify switch" class="fa fa-spotify"></i>
-         <i title="youtube switch" class="fa fa-youtube-play"></i>
-         <i title=" settings" class="fa fa-gear"></i>
-      </div> -->
-   </div>
-   <audio id="audio-playing" src=""></audio>
-   <div id="bottom_song_play" title="current playing song">
-      <div class="duration-bar" title="duration of current song">
-         <div id="progress_bar" title="duration of the song playing"></div>
-      </div>
-      <div class="left-bar"></div>
-      <div class="middle-bar">
-         <i class="fa fa-step-backward"></i>
-         <i class="fa fa-pause"></i>
-         <i class="fa fa-step-forward"></i>
-         <i class="fa fa-arrows-repeat"></i>
-      </div>
+        </div>
+        <div class="list-display">
+            <ul>
+                <li>
+                    <img src="./img/overpassimg.png" alt="" id="imageList">
+                    <div class="background"></div>
+                    <div id="songTitle">
+                        <span>ed sheeran</span>
+                        <h6>perfect</h6>
+                    </div>
+                </li>
+                <li>
+                    <img src="./img/overpassimg.png" alt="" id="imageList">
+                    <div class="background"></div>
+                    <div id="songTitle">
+                        <span>ed sheeran</span>
+                        <h6>perfect</h6>
+                    </div>
+                </li>
+                <li>
+                    <img src="./img/overpassimg.png" alt="" id="imageList">
+                    <div class="background"></div>
+                    <div id="songTitle">
+                        <span>ed sheeran</span>
+                        <h6>perfect</h6>
+                    </div>
+                </li>
+                <li>
+                    <img src="./img/overpassimg.png" alt="" id="imageList">
+                    <div class="background"></div>
+                    <div id="songTitle">
+                        <span>ed sheeran</span>
+                        <h6>perfect</h6>
+                    </div>
+                </li>
+                <li>
+                    <img src="./img/overpassimg.png" alt="" id="imageList">
+                    <div class="background"></div>
+                    <div id="songTitle">
+                        <span>ed sheeran</span>
+                        <h6>perfect</h6>
+                    </div>
+                </li>
+                <li>
+                    <img src="./img/overpassimg.png" alt="" id="imageList">
+                    <div class="background"></div>
+                    <div id="songTitle">
+                        <span>ed sheeran</span>
+                        <h4>perfect</h4>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
 
-   </div>
-   <script src="cdns/jquery.js"></script>
-   <script src="cdns/font_awesome/font_awesome.js"></script>
-   <script src="cdns/bootstrap/bootstrap.min.js"></script>
-   <script src="JS/script.js"></script>
 </body>
 
 </html>
