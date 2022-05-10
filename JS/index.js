@@ -66,10 +66,10 @@ $(function () {
             let listModel = `<div class="content-wrapper">
                                     <div class="img-wrapper">
                                         <img title="Song Cover" src="./img/${allMusic[index].img}" alt="" id="songList">
-                                        <div title="Vote Count" id="overlay">0</div>
+                                        <div title="Vote Count - 0" id="overlay">0</div>
                                     </div>
-                                    <h3 title="Song Title" id="title">${allMusic[index].name}</h3>
-                                    <p title="Artist" id="artist">${allMusic[index].artist} - <span id = "id-${index}"
+                                    <h3 title="Song Title - ${allMusic[index].name}" id="title">${allMusic[index].name}</h3>
+                                    <p title="Artist - ${allMusic[index].artist} " id="artist">${allMusic[index].artist} - <span id = "id-${index}" title="audio Duration"
                                     class = "audio-duration" ><audio class="select-${index}" src="./audio/${allMusic[index].src}"></audio></span></p>
                                     
                                 </div>`
@@ -94,14 +94,14 @@ $(function () {
         let isMusicPlay = playBtn.classList.contains("fa-pause");
         if (isMusicPlay) {
             $(playBtn).removeAttr("title");
-            $(playBtn).attr("title", "play Music");
+            $(playBtn).attr("title", "Pause Music");
             $(playBtn).removeClass("fa-pause")
             $(playBtn).addClass("fa-play")
             audio.play()
         } else {
             audio.pause()
             $(playBtn).removeAttr("title");
-            $(playBtn).attr("title", "Pause Music");
+            $(playBtn).attr("title", "Play Music");
             $(playBtn).removeClass("fa-play")
             $(playBtn).addClass("fa-pause")
         }
@@ -154,5 +154,8 @@ class = "audio-duration" ><audio class="select-${0}" src="./audio/${allMusic[0].
             currentSec = `0${currentSec}`;
         }
         if (musicCurrentTime) musicCurrentTime.innerHTML = `${currentMin}:${currentSec}`
+    })
+    audio.addEventListener("ended", () => {
+        isMusicPlay()
     })
 });
