@@ -106,6 +106,7 @@ $(function () {
             $(playBtn).addClass("fa-pause")
         }
     }
+
     function initialMusic() {
         $(playImg).attr("src", `${image_root}${allMusic[0].img}`);
         $("#title").html(`${allMusic[0].name}`);
@@ -125,7 +126,8 @@ class = "audio-duration" ><audio class="select-${0}" src="./audio/${allMusic[0].
         });
         playMusic(0)
     }
-    function playMusic(arg){
+
+    function playMusic(arg) {
         audio.src = `${audio_root}${allMusic[arg].src}`;
         // audio.play();
     }
