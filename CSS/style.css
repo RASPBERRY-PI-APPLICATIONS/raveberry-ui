@@ -61,19 +61,21 @@ body {
   cursor: pointer;
 }
 
-.body_wrapper .content1 #progress_area #progress_bar {
+.body_wrapper .content1 #progress_area #still_bar {
+  position: relative;
   margin-left: 20px;
   width: 50%;
   height: .4vw;
-  background: #ffffff7f;
+  background: #ffffff8a;
   border-radius: 5px;
 }
 
-.body_wrapper .content1 #progress_area #progress_bar::before {
-  background: white;
-  width: 25%;
-  height: 3px;
-  content: "";
+.body_wrapper .content1 #progress_area #progress_bar {
+  position: absolute;
+  width: 0%;
+  height: .4vw;
+  background: #ffffff;
+  border-radius: 5px;
 }
 
 .body_wrapper .content-wrapper {
