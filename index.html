@@ -6,76 +6,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>song list</title>
-    <link rel="stylesheet" href="CSS/list.css">
+    <link rel="stylesheet" href="./cdns/font_awesome/font_awesome.css">
+    <link rel="stylesheet" href="CSS/style.css">
 </head>
 
 <body>
-    <!-- TODO:ADD html -->
-    <div class="body-wrapper">
-        <div class="song-detail">
-            <img src="https://img.youtube.com/vi/0qTQR92UuUA/0.jpg" alt="" id="photo">
-            <div class="description">
-                <h1 id="title">perfect - 3:40</h1> 
-                <h6 id="artist">ed sheeran </h6>
-                <hr>
-               <p>add your songs on fetify.us</p>
-               <p>link 74734</p>
+    <div class="body_wrapper">
+        <div class="content1" title="current song playing">
+            <img src="" alt="" id="songPlaying">
+            <h3 title="song title" id="title">walking on the rain</h3>
+            <div id="progress_area"><i id="toggle_play" title="Pause Music" class="fa fa-pause"></i>
+                <div title="Music Duration" id="progress_bar"></div>
             </div>
+            <audio src="" id="audio-playing"></audio>
+            <p title="artist" id="artist"><span id="duration"></span></p>
         </div>
-        <div class="list-display">
-            <ul>
-                <li>
-                    <img src="./img/overpassimg.png" alt="" id="imageList">
-                    <div class="background"></div>
-                    <div id="songTitle">
-                        <span>ed sheeran</span>
-                        <h6>perfect</h6>
-                    </div>
-                </li>
-                <li>
-                    <img src="./img/overpassimg.png" alt="" id="imageList">
-                    <div class="background"></div>
-                    <div id="songTitle">
-                        <span>ed sheeran</span>
-                        <h6>perfect</h6>
-                    </div>
-                </li>
-                <li>
-                    <img src="./img/overpassimg.png" alt="" id="imageList">
-                    <div class="background"></div>
-                    <div id="songTitle">
-                        <span>ed sheeran</span>
-                        <h6>perfect</h6>
-                    </div>
-                </li>
-                <li>
-                    <img src="./img/overpassimg.png" alt="" id="imageList">
-                    <div class="background"></div>
-                    <div id="songTitle">
-                        <span>ed sheeran</span>
-                        <h6>perfect</h6>
-                    </div>
-                </li>
-                <li>
-                    <img src="./img/overpassimg.png" alt="" id="imageList">
-                    <div class="background"></div>
-                    <div id="songTitle">
-                        <span>ed sheeran</span>
-                        <h6>perfect</h6>
-                    </div>
-                </li>
-                <li>
-                    <img src="./img/overpassimg.png" alt="" id="imageList">
-                    <div class="background"></div>
-                    <div id="songTitle">
-                        <span>ed sheeran</span>
-                        <h4>perfect</h4>
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </div>
-
+        <div class="content2"></div>
+        <script src="./cdns/jquery.js"></script>
+        <script src="./JS/index.js"></script>
 </body>
 
 </html>
